@@ -20,7 +20,8 @@ const styles = {
   },
   toolBar: {
     width: '1200px',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    padding: '5px'
   }
 };
 
@@ -30,7 +31,7 @@ function HeadBar(props) {
       <AppBar position="sticky" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
           <Button color="inherit">ABOUT</Button>
-          <Button color="inherit">EXPEIENCE</Button>
+          <Button color="inherit">EXPERIENCE</Button>
           <Button color="inherit">WORK</Button>
           <Button color="inherit">CONTACT</Button>
         </Toolbar>

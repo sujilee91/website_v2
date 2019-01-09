@@ -25,25 +25,41 @@ const styles = {
     paddingLeft: '50px' 
   },
   title1: {
-    paddingTop: '50px'
+    paddingTop: '50px',
+    fontFamily: '"Open Sans", sans-serif',
+    fontSize: '4rem',
+    fontWeight: 700,
+    lineHeight: 1.04,
+    letterSpacing: '0em',
+    color: '#484848',
   },
   title2: {
-    paddingTop: '20px',
-    paddingBottom: '20px'
+    paddingTop: '15px',
+    marginBottom: '35px',
+    paddingLeft: '5px',
+    fontFamily: '"Open Sans", sans-serif',
+    fontSize: '1.8rem',
+    fontWeight: 700,
+    lineHeight: 1.04,
+    letterSpacing: '0em',
+    color: '#B7B8BA',
   },
   divider: {
     maxWidth: '30%'
   },
   iconMargin: {
-    margin: '5px',
-    backgroundColor: 'white'
+    margin: '10px',
+    backgroundColor: 'white',
+    boxShadow: 'none',
   },
   iconMarginRight: {
-    marginRight: '5px',
-    backgroundColor: 'white'
+    marginRight: '10px',
+    backgroundColor: 'white',
+    boxShadow: 'none'
   },
   iconContainer: {
-    marginTop: '20px',
+    marginTop: '30px',
+    marginBottom: '20px'
   }
 };
 
@@ -52,26 +68,30 @@ function Main(props) {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <Typography variant="h3" component="h3" className={classes.title1}>
-          Front-end
-        </Typography>
-        <Typography variant="h5" className={classes.title2}>
-          UX/UI Developer
-        </Typography>
-        <Divider className={classes.divider}/>
-        <div className={classes.iconContainer}>
-          <Fab size="small" className={classes.iconMarginRight}>
-            <FontAwesomeIcon icon={['fab', 'linkedin']} />
-          </Fab>
-          <Fab size="small" className={classes.iconMargin}>
-            <FontAwesomeIcon icon={['fab', 'github']} />
-          </Fab>
-          <Fab size="small" className={classes.iconMargin}>
-            <FontAwesomeIcon icon={['fab', 'instagram']} />
-          </Fab>
-          <Fab size="small" className={classes.iconMargin}>
-            <FontAwesomeIcon icon={['fab', 'dribbble']} />
-          </Fab>
+        <div className={classes.innerContainer1}>
+          <Typography variant="h3" component="h3" className={classes.title1}>
+            Front-end
+          </Typography>
+          <Typography variant="h5" className={classes.title2}>
+            UX / UI Developer
+          </Typography>
+          <Divider className={classes.divider}/>
+          <div className={classes.iconContainer}>
+            <Fab size="small" className={classes.iconMarginRight}>
+              <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+            </Fab>
+            <Fab size="small" className={classes.iconMargin}>
+              <FontAwesomeIcon icon={['fab', 'github-alt']} />
+            </Fab>
+            <Fab size="small" className={classes.iconMargin}>
+              <FontAwesomeIcon icon={['fab', 'instagram']} />
+            </Fab>
+            <Fab size="small" className={classes.iconMargin}>
+              <FontAwesomeIcon icon={['fab', 'dribbble']} />
+            </Fab>
+          </div>
+        </div>
+        <div className={classes.innerContainer2}>
         </div>
       </div>
     </div>
