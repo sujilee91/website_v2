@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Title from './Title';
+import Title from '../Title';
 import Button from '@material-ui/core/Button';
-import theme from '../styles/theme'
+import theme from '../../styles/theme'
 import { MuiThemeProvider } from '@material-ui/core/styles';
 
 const styles = (theme) => ({
@@ -30,12 +30,10 @@ function About(props) {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <Title value={'About'}/>
-        <MuiThemeProvider theme={theme}>
-          <Button color={"primary"} variant="contained" size={'small'} className={classes.resumeButton}>
-            View Resume
-          </Button>
-        </MuiThemeProvider>
+        <Title value={'Experience'}/>
+        {/* <MuiThemeProvider theme={theme}>
+
+        </MuiThemeProvider> */}
       </div>
     </div>
   );
