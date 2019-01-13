@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Title from '../Title';
-import Button from '@material-ui/core/Button';
 import theme from '../../styles/theme'
 import { MuiThemeProvider } from '@material-ui/core/styles';
 
