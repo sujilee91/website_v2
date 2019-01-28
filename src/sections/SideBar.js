@@ -10,13 +10,12 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const styles = {
   root: {
-    flexGrow: 1,
     height: '100%',
     backgroundColor: '#E3E3E3',
-    display: 'flex',
     position: 'fixed',
     zIndex: 999,
-    top: 0
+    top: 0,
+    width: 'auto'
   },
   container: {
     maxWidth: '1170px',
@@ -35,21 +34,6 @@ const styles = {
   title2: {
     paddingTop: '20px',
     paddingBottom: '20px'
-  },
-  divider: {
-    maxWidth: '30%'
-  },
-  iconMargin: {
-    margin: '5px',
-    backgroundColor: 'white'
-  },
-  iconMarginRight: {
-    marginRight: '5px',
-    backgroundColor: 'white'
-  },
-  iconContainer: {
-    marginTop: '20px',
-    marginBottom: '20px'
   }
 };
 
@@ -57,14 +41,13 @@ function SideBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <Paper className={classes.container} elevation={0}>
-        <div className={classes.title1}>
+      <Paper elevation={0}>
+        <div>
           Front-end
         </div>
-        <Typography variant="h5" className={classes.title2}>
+        <Typography variant="h5">
           UX/UI Developer
         </Typography>
-        <Divider className={classes.divider}/>
       </Paper>
     </div>
   );

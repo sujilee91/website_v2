@@ -11,7 +11,7 @@ const styles = {
     lineHeight: 1.04,
     letterSpacing: '0em',
     color: '#484848',
-    marginBottom: '20px'
+    marginBottom: '30px'
   }
 };
 

@@ -19,6 +19,22 @@ const theme = createMuiTheme({
         'Oxygen',
         'Hind Siliguri'
       ].join(','),
+    display1: {
+      fontFamily: ['Hind Vadodara'],
+      fontWeight: '900',
+      fontSize: 32,
+      color: primaryColor
+    },
+    display2: {
+      fontFamily: ['Roboto'],
+      fontWeight: '300',
+      fontSize: 15,
+    },
+    display3: {
+      fontFamily: ['Hind'],
+      fontWeight: '800',
+      fontSize: 13,
+    }
   },
   palette: {
     primary: { 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Title from '../Title';
+import Title from '../component/Title';
 import Button from '@material-ui/core/Button';
-import theme from '../../styles/theme'
+import theme from '../styles/theme'
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -18,8 +18,7 @@ const styles = (theme) => ({
   },
   container: {
     maxWidth: '1170px',
-    margin: 'auto',
-    paddingLeft: '50px' 
+    margin: 'auto'
   },
   resumeButton: {
     fontSize: '1rem',
@@ -29,7 +28,8 @@ const styles = (theme) => ({
   },
   cards: {
     marginTop: '2.5rem',
-    marginBottom: '2.5rem'
+    marginBottom: '2.5rem',
+    textAlign: 'center',
   },
   buttonGrid: {
     textAlign: 'center'
@@ -44,7 +44,7 @@ function About(props) {
         <Title value={'About'}/>
         <MuiThemeProvider theme={theme}>
           <Grid container spacing={24} className={classes.cards}>
-            <Grid item lg={3} xs={6}>
+            <Grid item lg={3} md={3} xs={12}>
               <Card>
                 <CardContent>
                   <div>
@@ -54,7 +54,7 @@ function About(props) {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item lg={3} xs={6}>
+            <Grid item lg={3} md={3} xs={12}>
               <Card>
                 <CardContent>
                   <div>
@@ -64,7 +64,7 @@ function About(props) {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item lg={3} xs={6}>
+            <Grid item lg={3} md={3} xs={12}>
               <Card>
                 <CardContent>
                   <div>
@@ -74,7 +74,7 @@ function About(props) {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item lg={3} xs={6}>
+            <Grid item lg={3} md={3} xs={12}>
               <Card>
                 <CardContent>
                   <div>

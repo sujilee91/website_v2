@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Title from '../Title';
-import Button from '@material-ui/core/Button';
-import theme from '../../styles/theme'
+import Title from '../component/Title';
+import theme from '../styles/theme'
 import { MuiThemeProvider } from '@material-ui/core/styles';
 
 const styles = (theme) => ({
@@ -16,7 +15,6 @@ const styles = (theme) => ({
   container: {
     maxWidth: '1170px',
     margin: 'auto',
-    paddingLeft: '50px' 
   },
   resumeButton: {
     fontSize: '1rem',
@@ -25,12 +23,12 @@ const styles = (theme) => ({
   }
 });
 
-function About(props) {
+function Project(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <Title value={'Experience'}/>
+        <Title value={'Latest Projects'}/>
         {/* <MuiThemeProvider theme={theme}>
 
         </MuiThemeProvider> */}
@@ -39,4 +37,4 @@ function About(props) {
   );
 }
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(Project);
