@@ -52,8 +52,6 @@ const styles = (theme) => ({
     lineHeight: '330%'
   },
   content: {
-    overflowX: 'auto',
-    overflow: 'scroll',
     wordWrap: 'break-word',
     textAlign: 'center',
   },

@@ -33,6 +33,9 @@ const styles = (theme) => ({
     fontSize: 15,
     color: '#be3535',
     fontStyle: 'italic'
+  },
+  edu: {
+    cursor: 'pointer'
   }
 });
 
@@ -41,15 +44,17 @@ class EducationTile extends React.Component {
     super(props)
 
     this.state = {
-     handelClick: ''
+     selectedEdu: ''
     }
   };
 
   render(){
-    const {classes, location, schoolName, degree, award, description, date } = this.props;
+    const {classes, location, schoolName, degree, award,  date } = this.props;
     return (    
         <Grid container spacing={8} className={classes.root} direction={'row-reverse'}>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} className={classes.edu} onMouseOver={()=>{
+            this.setState({selectedEdu: schoolName});
+          }}>
             <div style={theme.typography.display2}>
               {location}
             </div>
@@ -62,12 +67,14 @@ class EducationTile extends React.Component {
             <div className={classes.award}>
               {award}
             </div>
-            {/* <div className={classes.description}>
-              {description}
-            </div> */}
             <div className={classes.date}>
               {date}
             </div>
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <Card elevation={0}>
+              {this.state.selectedEdu}
+            </Card>
           </Grid>
         </Grid>
       )
