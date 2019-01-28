@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SuJi Lee, Frontend UX/UI Developer",
+  "name": "SuJi Lee, Frontend UX/UI Developer",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "Simba.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

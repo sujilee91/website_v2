@@ -4,14 +4,16 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Fab from '@material-ui/core/Fab';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SideBar from '../sections/SideBar'
-import About from '../sections/About'
-import Main from '../sections/Main'
-import Experience from '../sections/Experience'
-import Project from '../sections/Projects'
-import Skill from '../sections/Skills'
-import Grid from '@material-ui/core/Grid'
-import Hidden from '@material-ui/core/Hidden'
+import SideBar from '../sections/SideBar';
+import About from '../sections/About';
+import Main from '../sections/Main';
+import Experience from '../sections/Experience';
+import Education from '../sections/Education';
+import Footer from '../component/Footer';
+import Project from '../sections/Projects';
+import Skill from '../sections/Skills';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 const styles = {
   root: {
@@ -24,7 +26,7 @@ const styles = {
     zIndex: 0
   },
   sideBar: {
-    backgroundColor: '#E3E3E3'
+    backgroundColor: '#E3E3E3',
   }
 };
 
@@ -34,7 +36,7 @@ function Container(props) {
     <div>
       <Grid container={true} spacing={0}>
         <Hidden mdDown>
-          <Grid item={true} lg={2} className={classes.sideBar}>
+          <Grid item={true} xs={12} lg={2} className={classes.sideBar}>
             <SideBar/>
           </Grid>
         </Hidden>
@@ -42,8 +44,10 @@ function Container(props) {
           <Main/>
           <About/>
           <Experience/>
+          <Education/>
           <Project/>
           <Skill/>
+          <Footer/>
         </Grid>
       </Grid>
     </div>

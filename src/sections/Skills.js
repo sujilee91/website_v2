@@ -74,7 +74,7 @@ function Skill(props) {
       <div className={classes.container}>
         <Title value={'Skills'}/>
         <Grid container={true} spacing={40}>
-          <Grid item={true} xs={12} sm={6}>
+          <Grid item={true} xs={12} md={6}>
             <Card className={classes.card}>
               <CardHeader title={"Development"} classes={{root: classes.headerContainer, title: classes.header}}/>
               <CardContent className={classes.content}>
@@ -88,7 +88,7 @@ function Skill(props) {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item={true} xs={12} sm={4}>
+          <Grid item={true} xs={12} md={4}>
             <Card className={classes.card}>
               <CardHeader title={"UX / UI"} classes={{root: classes.headerContainer, title: classes.header}}/>
               <CardContent className={classes.content}>

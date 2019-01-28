@@ -15,7 +15,7 @@ const styles = {
     position: 'fixed',
     zIndex: 999,
     top: 0,
-    width: 'auto'
+    width: 'auto',
   },
   container: {
     maxWidth: '1170px',
@@ -46,7 +46,7 @@ function SideBar(props) {
           Front-end
         </div>
         <Typography variant="h5">
-          UX/UI Developer
+          UX/UI Developer 
         </Typography>
       </Paper>
     </div>
