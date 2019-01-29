@@ -1,13 +1,11 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Title from '../component/Title';
-import theme from '../styles/theme'
-import { MuiThemeProvider } from '@material-ui/core/styles';
 
-const styles = (theme) => ({
+const styles = () => ({
   root: {
     flexGrow: 1,
-    padding: '50px',
+    padding: '25px 50px',
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0
@@ -29,9 +27,7 @@ function Project(props) {
     <div className={classes.root}>
       <div className={classes.container}>
         <Title value={'Latest Projects'}/>
-        {/* <MuiThemeProvider theme={theme}>
 
-        </MuiThemeProvider> */}
       </div>
     </div>
   );

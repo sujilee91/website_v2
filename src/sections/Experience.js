@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Fade from '@material-ui/core/Fade';
 import Title from '../component/Title';
 import ExperienceTile from '../component/ExpTile';
 import ExperienceCard from '../component/ExpCard';
 
 
-const styles = (theme) => ({
+const styles = () => ({
   root: {
     flexGrow: 1,
-    padding: '50px',
+    padding: '25px 50px',
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0
@@ -34,7 +32,7 @@ class Experiences extends React.Component {
     this.state = {
      selectedCard: ''
     }
-  };
+  }
 
   render(){
     const { classes } = this.props;

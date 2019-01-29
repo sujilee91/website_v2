@@ -1,9 +1,5 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import Fab from '@material-ui/core/Fab';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SideBar from '../sections/SideBar';
 import About from '../sections/About';
 import Main from '../sections/Main';
@@ -44,9 +40,9 @@ function Container(props) {
           <Main/>
           <About/>
           <Experience/>
-          <Education/>
           <Project/>
           <Skill/>
+          <Education/>
           <Footer/>
         </Grid>
       </Grid>

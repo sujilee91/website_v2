@@ -3,7 +3,7 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 const primaryColor = '#BE3535';
 const secondaryColor = '#484848';
 
-const theme = createMuiTheme({
+const customTheme = createMuiTheme({
   typography: {
     htmlFontSize: 10,
     fontFamily: [
@@ -38,7 +38,7 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: { 
-        main: '#be3535', 
+        main: '#BE3535', 
         contrastText: '#fff',
         dark: '#7B1515'
     },
@@ -50,4 +50,4 @@ const theme = createMuiTheme({
   }
 });
 
-export default theme
+export default customTheme

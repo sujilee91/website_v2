@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
-import theme from '../styles/theme'
-import IconButton from '@material-ui/core/IconButton';
+import customTheme from '../styles/theme'
 
-const styles = (theme) => ({
+const styles = (customTheme) => ({
   root: {
     flexGrow: 1,
   },
@@ -25,6 +23,9 @@ const styles = (theme) => ({
     padding: '5px',
     marginRight: '20px'
   },
+  main:{
+    font: customTheme.typography.display3
+  }
 });
 
 function HeadBar(props) {
@@ -32,7 +33,7 @@ function HeadBar(props) {
   return (
       <AppBar position="sticky" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
-          <Hidden smDown={true} style={theme.typography.display3}>
+          <Hidden smDown={true} className={classes.main}>
             <Button color="inherit"> ABOUT </Button>
             <Button color="inherit"> EXPERIENCE </Button>
             <Button color="inherit"> WORK </Button>

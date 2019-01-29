@@ -2,16 +2,16 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Title from '../component/Title';
 import Button from '@material-ui/core/Button';
-import theme from '../styles/theme'
+import customTheme from '../styles/theme'
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 
-const styles = (theme) => ({
+const styles = (customTheme) => ({
   root: {
     flexGrow: 1,
-    padding: '50px',
+    padding: '50px 50px 25px',
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0
@@ -42,7 +42,7 @@ function About(props) {
     <div className={classes.root}>
       <div className={classes.container}>
         <Title value={'About'}/>
-        <MuiThemeProvider theme={theme}>
+        <MuiThemeProvider theme={customTheme}>
           <Grid container spacing={24} className={classes.cards}>
             <Grid item lg={3} md={3} xs={12}>
               <Card>

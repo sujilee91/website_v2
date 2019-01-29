@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Title from '../component/Title';
 import Card from '@material-ui/core/Card';
@@ -6,13 +6,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
-import theme from '../styles/theme';
-import { MuiThemeProvider } from '@material-ui/core/styles';
 
-const styles = (theme) => ({
+const styles = () => ({
   root: {
     flexGrow: 1,
-    padding: '50px',
+    padding: '25px 50px',
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0

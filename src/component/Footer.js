@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+import Grid from '@material-ui/core/Grid';
 
 const styles = {
   root: {
@@ -29,7 +26,13 @@ const styles = {
 function Footer(props) {
   const { classes } = props;
   return (
-      <AppBar position="sticky" className={classes.appBar} elevation={0}/>
+      <AppBar position="sticky" className={classes.appBar} elevation={0}>
+        <Grid container className={classes.toolBar}>
+          <Grid item>
+            12
+          </Grid>
+        </Grid>
+      </AppBar>
   );
 }
 

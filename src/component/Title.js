@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { TypographyProps as MuiTypographyProps, default as MuiTypography } from '@material-ui/core/Typography'
-
 
 const styles = {
   root: {
@@ -11,7 +9,7 @@ const styles = {
     lineHeight: 1.04,
     letterSpacing: '0em',
     color: '#484848',
-    marginBottom: '40px'
+    marginBottom: '35px'
   }
 };
 
