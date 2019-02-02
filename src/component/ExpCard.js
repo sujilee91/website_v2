@@ -74,8 +74,8 @@ class ExperienceCard extends React.Component{
           <Fade in={exp === 'showpass'} timeout={{ enter: 1000, exit: 1000 }}>
             <Card className={classes.root}>
               <div className={classes.imageContianer}>
-              <img src={showpass} className={classes.image} alt={exp}/>
-            </div>
+                <img src={showpass} className={classes.image} alt={exp}/>
+              </div>
               <CardContent>
                 <Typography gutterBottom variant="h5" funncomponent="h2">
                     Showpass
