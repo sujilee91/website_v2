@@ -33,19 +33,34 @@ const styles = (customTheme) => ({
   },
   buttonGrid: {
     textAlign: 'center'
+  },
+  aboutCard: {
+    borderRadius: customTheme.typography.pxToRem(500),
+    width: customTheme.typography.pxToRem(200),
+    height:  customTheme.typography.pxToRem(200)
   }
 });
 
-function About(props) {
-  const { classes } = props;
+class About extends React.Component{
+
+  render(){
   return (
-    <div className={classes.root}>
-      <div className={classes.container}>
+    <div className={this.props.classes.root}>
+      <div className={this.props.classes.container}>
         <Title value={'About'}/>
         <MuiThemeProvider theme={customTheme}>
-          <Grid container spacing={24} className={classes.cards}>
+          <Grid container spacing={24} className={this.props.classes.cards}>
             <Grid item lg={3} md={3} xs={12}>
-              <Card>
+              <Card className={this.props.classes.aboutCard}>
+                <CardContent>
+                  <div>
+                    
+                  </div>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item lg={3} md={3} xs={12}>
+              <Card className={this.props.classes.aboutCard}>
                 <CardContent>
                   <div>
                     Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -55,7 +70,7 @@ function About(props) {
               </Card>
             </Grid>
             <Grid item lg={3} md={3} xs={12}>
-              <Card>
+              <Card className={this.props.classes.aboutCard}>
                 <CardContent>
                   <div>
                     Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -65,17 +80,7 @@ function About(props) {
               </Card>
             </Grid>
             <Grid item lg={3} md={3} xs={12}>
-              <Card>
-                <CardContent>
-                  <div>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                  </div>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item lg={3} md={3} xs={12}>
-              <Card>
+              <Card className={this.props.classes.aboutCard}>
                 <CardContent>
                   <div>
                     Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -85,9 +90,9 @@ function About(props) {
               </Card>
             </Grid>
           </Grid>
-          <Grid container spacing={24} className={classes.buttonGrid}>
+          <Grid container spacing={24} className={this.props.classes.buttonGrid}>
             <Grid item lg={12} xs={12}>
-              <Button color={"primary"} variant="contained" size={'small'} className={classes.resumeButton}>
+              <Button color={"primary"} variant="contained" size={'small'} className={this.props.classes.resumeButton} onClick={this.openDialog}>
                 View Resume
               </Button>
             </Grid>
@@ -95,7 +100,8 @@ function About(props) {
         </MuiThemeProvider>
       </div>
     </div>
-  );
+    );
+  }
 }
 
 export default withStyles(styles)(About);

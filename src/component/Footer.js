@@ -2,6 +2,8 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
+import Fab from '@material-ui/core/Fab';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const styles = {
   root: {
@@ -27,11 +29,6 @@ function Footer(props) {
   const { classes } = props;
   return (
       <AppBar position="sticky" className={classes.appBar} elevation={0}>
-        <Grid container className={classes.toolBar}>
-          <Grid item>
-            12
-          </Grid>
-        </Grid>
       </AppBar>
   );
 }

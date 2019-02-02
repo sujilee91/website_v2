@@ -8,8 +8,9 @@ import tap from '../images/tap.png';
 import showpass from '../images/showpass.jpg';
 import cm from '../images/cm.png';
 import oil from '../images/client.png'
+import theme from '../styles/theme'
 
-const styles = () => ({
+const styles = (theme) => ({
   root: {
     animation: 'zoom 0.5s'
   },
@@ -21,6 +22,13 @@ const styles = () => ({
     marginLeft: 'auto',
     marginRight: 'auto'
   },
+  description: {
+    fontFamily: 'Hind'
+  },
+  specs: {
+    marginTop: theme.typography.pxToRem(10),
+    fontStyle: 'italic'
+  }
 });
 
 class ExperienceCard extends React.Component{
@@ -52,10 +60,12 @@ class ExperienceCard extends React.Component{
                 <Typography gutterBottom variant="h5" component="h2">
                     TapTapQuote
                 </Typography>
-                <Typography component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                  </Typography>
+                <Typography component="p" className={classes.description}>
+                    Create new component and page / Update page with responsiveness.
+                    <div className={classes.specs}>
+                      ReactJS, Typescript, Material-ui
+                    </div>
+                </Typography>
               </CardContent>
             </Card>
           </Fade>
@@ -67,12 +77,14 @@ class ExperienceCard extends React.Component{
               <img src={showpass} className={classes.image} alt={exp}/>
             </div>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h5" funncomponent="h2">
                     Showpass
                 </Typography>
-                <Typography component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                <Typography component="p"  className={classes.description}>
+                    Deliver new feature / Update existing page client Wordpress page, and Wordpress extension.
+                    <div className={classes.specs}>
+                      AngularJS, Angular Material, PHP, Wordpress
+                    </div>
                   </Typography>
               </CardContent>
             </Card>
@@ -88,8 +100,11 @@ class ExperienceCard extends React.Component{
                 <Typography gutterBottom variant="h5" component="h2">
                     Critical Mass
                 </Typography>
-                <Typography component="p">
-
+                <Typography component="p"  className={classes.description}>
+                  Participated on team project for client and content management.Create personal projects using React.
+                  <div className={classes.specs}>
+                    Bitbucket/Jira, SASS, ReactJS, CMS
+                  </div>
                 </Typography>
               </CardContent>
             </Card>
@@ -105,8 +120,11 @@ class ExperienceCard extends React.Component{
                 <Typography gutterBottom variant="h5" component="h2">
                     Oil & Gas Industry Client
                 </Typography>
-                <Typography component="p">
-                  Build HTML5 based Web & Mobile App for the graduation project for oil & gas industry client.
+                <Typography component="p" className={classes.description}>
+                  Build HTML5 based web, mobile App as a graduation project for oil & gas industry client.
+                  <div className={classes.specs}>
+                    Bootstrap, JavaEE, SpringMVC, MySQL
+                  </div>
                 </Typography>
               </CardContent>
             </Card>

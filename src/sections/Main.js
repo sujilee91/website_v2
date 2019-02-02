@@ -74,17 +74,17 @@ function Main(props) {
           </Typography>
           <Divider className={classes.divider}/>
           <div className={classes.iconContainer}>
-            <Fab size="small" className={classes.iconMarginRight}>
-              <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+            <Fab size="small" className={classes.iconMarginRight} onClick={()=> window.open("https://www.linkedin.com/in/sujilee91/", "_blank")}>
+              <FontAwesomeIcon icon={['fab', 'linkedin-in']} onClick={()=> window.open("https://www.linkedin.com/in/sujilee91/", "_blank")}/>
             </Fab>
             <Fab size="small" className={classes.iconMargin}>
-              <FontAwesomeIcon icon={['fab', 'github-alt']} />
+              <FontAwesomeIcon icon={['fab', 'github-alt']} onClick={()=> window.open("https://github.com/sujilee91", "_blank")}/>
             </Fab>
             <Fab size="small" className={classes.iconMargin}>
-              <FontAwesomeIcon icon={['fab', 'instagram']} />
+              <FontAwesomeIcon icon={['fab', 'instagram']} onClick={()=> window.open("https://www.instagram.com/sujilee_anderson/", "_blank")}/>
             </Fab>
             <Fab size="small" className={classes.iconMargin}>
-              <FontAwesomeIcon icon={['fab', 'dribbble']} />
+              <FontAwesomeIcon icon={['fab', 'dribbble']} onClick={()=> window.open("https://dribbble.com/sujilee91", "_blank")}/>
             </Fab>
           </div>
         </div>

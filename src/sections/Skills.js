@@ -62,9 +62,10 @@ const styles = () => ({
 
 function Skill(props) {
   const { classes } = props;
-  const development1 = ['HTML5', 'SASS', 'CSS', 'ES6', 'ReactJS','AngularJS', 'Material-UI', 'Bootstrap' , 'PHP', 'Wordpress', 'JavaEE', 'jQuery', 'MySQL'];
+  const development1 = ['HTML5', 'SASS', 'CSS', 'ES6', 'ReactJS','AngularJS', 'PHP', 'Wordpress', 'JavaEE', 'jQuery', 'MySQL'];
   const devExtra = ['Bitbucket / JIRA', 'Github', 'SourceTree'];
-  const uxUi = ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD', 'Sketch / Marvel']
+  const uxUi = ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD']
+  const framework = ['Material-UI', 'Bootstrap' , 'Sementic UI']
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -84,12 +85,22 @@ function Skill(props) {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item={true} xs={12} md={4}>
+          <Grid item={true} xs={12} sm={6} md={3}>
             <Card className={classes.card}>
               <CardHeader title={"UX / UI"} classes={{root: classes.headerContainer, title: classes.header}}/>
               <CardContent className={classes.content}>
                 {uxUi.map((ux, index)=> {
                   return <div className={classes.uxItem} key={index}>{ux}</div>
+                })}
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item={true} xs={12} sm={6} md={3}>
+            <Card className={classes.card}>
+              <CardHeader title={"Framework"} classes={{root: classes.headerContainer, title: classes.header}}/>
+              <CardContent className={classes.content}>
+                {framework.map((framework, index)=> {
+                  return <div className={classes.uxItem} key={index}>{framework}</div>
                 })}
               </CardContent>
             </Card>
