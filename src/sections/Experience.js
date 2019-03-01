@@ -54,7 +54,7 @@ class Experiences extends React.Component {
                 onClick={()=>{
                   this.setState({selectedCard:'tap'})
                 }}/>
-              <ExperienceTile year={'2017'} from={'Sept'} to={'July'} title={'Frontend UX/UI Developer'} company={'Showpass'} divider={false} description={skillList.showpass} 
+              <ExperienceTile year={'2017'} from={'Sept'} to={'July, 2018'} title={'Frontend UX/UI Developer'} company={'Showpass'} divider={false} description={skillList.showpass} 
                 onClick={()=>{
                   this.setState({selectedCard:'showpass'})
                 }}/>

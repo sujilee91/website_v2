@@ -57,7 +57,7 @@ class ExperienceTile extends React.Component {
         <Grid container spacing={8}>
           <Grid item xs={2}>
             {year && (<Typography className={classes.year} style={customTheme.typography.display1}>{year}</Typography>)}
-            {(from && to) && (<Typography className={classes.date} style={customTheme.typography.display3}>{from} - {to}</Typography>)}
+            {(from || to) && (<Typography className={classes.date} style={customTheme.typography.display3}>{from} - {to}</Typography>)}
           </Grid>
           <Grid item xs={2} className={classes.vdContainer}>
             <div className={classes.verticalDivider}></div>

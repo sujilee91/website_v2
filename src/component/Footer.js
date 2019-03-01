@@ -29,6 +29,7 @@ function Footer(props) {
   const { classes } = props;
   return (
       <AppBar position="sticky" className={classes.appBar} elevation={0}>
+        Footer
       </AppBar>
   );
 }
