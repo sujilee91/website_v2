@@ -57,7 +57,7 @@ class ExperienceCard extends React.Component{
                 <img src={tap} className={classes.image} alt={exp}/>
               </div>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h3" component="h3">
                     TapTapQuote
                 </Typography>
                 <Typography component="p" className={classes.description}>
@@ -77,7 +77,7 @@ class ExperienceCard extends React.Component{
                 <img src={showpass} className={classes.image} alt={exp}/>
               </div>
               <CardContent>
-                <Typography gutterBottom variant="h5" funncomponent="h2">
+                <Typography gutterBottom variant="h3" funncomponent="h3">
                     Showpass
                 </Typography>
                 <Typography component="p"  className={classes.description}>
@@ -97,7 +97,7 @@ class ExperienceCard extends React.Component{
                 <img src={cm} className={classes.image} alt={exp}/>
               </div>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h3" component="h3">
                     Critical Mass
                 </Typography>
                 <Typography component="p"  className={classes.description}>
@@ -117,7 +117,7 @@ class ExperienceCard extends React.Component{
                 <img src={oil} className={classes.image} alt={exp}/>
               </div>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h3" component="h3">
                     Oil & Gas Industry Client
                 </Typography>
                 <Typography component="p" className={classes.description}>

@@ -1,12 +1,16 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Title from '../component/Title';
 import Button from '@material-ui/core/Button';
 import customTheme from '../styles/theme'
-import { MuiThemeProvider } from '@material-ui/core/styles';
+import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import Typography from '@material-ui/core/Typography';
 
 const styles = (customTheme) => ({
   root: {
@@ -42,6 +46,19 @@ const styles = (customTheme) => ({
 });
 
 class About extends React.Component{
+  constructor(props) {
+    super(props)
+
+    this.state = {
+     openDialog: false
+    }
+  };
+
+  handleClose = () => {
+    this.setState({
+      openDialog: false
+    })
+  }
 
   render(){
   return (
@@ -92,9 +109,25 @@ class About extends React.Component{
           </Grid>
           <Grid container spacing={24} className={this.props.classes.buttonGrid}>
             <Grid item lg={12} xs={12}>
-              <Button color={"primary"} variant="contained" size={'small'} className={this.props.classes.resumeButton} onClick={this.openDialog}>
+              <Button color={"primary"} variant="contained" size={'small'} className={this.props.classes.resumeButton} onClick={()=>{this.setState({openDialog: true})}}>
                 View Resume
               </Button>
+              <Dialog
+                fullScreen={this.props.children}
+                open={this.state.openDialog}
+                onClose={this.handleClose}
+                scroll={'paper'}
+                aria-labelledby="ResumeDialog"
+                >
+                <DialogContent>
+                  
+                </DialogContent>
+                <DialogActions>
+                  <Button onClick={this.handleClose} color="primary" autoFocus>
+                    Close
+                  </Button>
+                </DialogActions>
+              </Dialog>
             </Grid>
           </Grid>
         </MuiThemeProvider>

@@ -1,13 +1,9 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-
+import { withStyles, MuiThemeProvider } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
+import theme from '../styles/theme'
 const styles = {
   root: {
-    fontFamily: '"Hind Vadodara", sans-serif',
-    fontSize: '2.3rem',
-    fontWeight: 900,
-    lineHeight: 1.04,
-    letterSpacing: '0em',
     color: '#484848',
     marginBottom: '35px'
   }
@@ -16,9 +12,11 @@ const styles = {
 function Title(props) {
   const { classes, value } = props;
   return (
-    <div className={classes.root}>
-      {value.toUpperCase()}
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <Typography variant="h2" className={classes.root}>
+        {value.toUpperCase()}
+      </Typography>
+    </MuiThemeProvider>
   );
 }
 

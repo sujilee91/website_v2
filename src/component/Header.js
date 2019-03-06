@@ -31,7 +31,7 @@ const styles = (customTheme) => ({
 function HeadBar(props) {
   const { classes } = props;
   return (
-      <AppBar position="sticky" className={classes.appBar}>
+      <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
           <Hidden smDown={true} className={classes.main}>
             <Button color="inherit"> ABOUT </Button>
