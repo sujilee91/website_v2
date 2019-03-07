@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles, MuiThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Fab from '@material-ui/core/Fab';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,13 +15,18 @@ const styles = (theme) => ({
     backgroundColor: '#FAFAFA',
     alignItems: 'center',
     justifyContent: 'center',
-    zIndex: 0
+    zIndex: 0,
   },
   container: {
     maxWidth: '1170px',
     margin: 'auto',
     backgroundColor: 'inherit',
-    paddingLeft: '50px' 
+    paddingLeft: theme.typography.pxToRem(50),
+    marginTop: theme.typography.pxToRem(100),
+    [theme.breakpoints.down('sm')]:{
+      paddingLeft: theme.typography.pxToRem(20),
+      textAlign: 'center'
+    },
   },
   title1: {
     color: '#484848',
@@ -32,7 +38,10 @@ const styles = (theme) => ({
     color: '#B7B8BA',
   },
   divider: {
-    maxWidth: '30%'
+    maxWidth: '80%',
+    [theme.breakpoints.down('sm')]:{
+      margin: 'auto'
+    },
   },
   iconMargin: {
     margin: '10px',
@@ -55,8 +64,8 @@ function Main(props) {
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
-        <div className={classes.container}>
-          <div className={classes.innerContainer1}>
+        <Grid container={true} spacing={0} className={classes.container}>
+          <Grid item={true} xs={12} sm={6}>
             <Typography variant="h1" className={classes.title1}>
               Front-end
             </Typography>
@@ -78,10 +87,10 @@ function Main(props) {
                 <FontAwesomeIcon icon={['fab', 'dribbble']}/>
               </Fab>
             </div>
-          </div>
-          <div className={classes.innerContainer2}>
-          </div>
-        </div>
+          </Grid>
+          <Grid item={true} xs={12} sm={6}>
+          </Grid>
+        </Grid>
       </div>
     </MuiThemeProvider>
   );

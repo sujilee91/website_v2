@@ -3,15 +3,19 @@ import { withStyles } from '@material-ui/core/styles';
 import Title from '../component/Title';
 import EducationTitle from '../component/EduTile';
 import Grid from '@material-ui/core/Grid';
+import customTheme from '../styles/theme'
 
-const styles = () => ({
+const styles = (customTheme) => ({
   root: {
     flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0,
     padding: '25px 50px 50px',
-    marginBottom: '50px'
+    marginBottom: '50px',
+    [customTheme.breakpoints.down('sm')]:{
+      padding: '50px 25px',
+    },
   },
   container: {
     maxWidth: '1170px',

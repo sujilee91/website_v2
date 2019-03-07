@@ -13,7 +13,10 @@ const styles = () => ({
     padding: '25px 50px',
     alignItems: 'center',
     justifyContent: 'center',
-    zIndex: 0
+    zIndex: 0,
+    [theme.breakpoints.down('sm')]:{
+      padding: '25px',
+    },
   },
   container: {
     maxWidth: '1170px',

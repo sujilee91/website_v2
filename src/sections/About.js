@@ -18,7 +18,10 @@ const styles = (customTheme) => ({
     padding: '50px 50px 25px',
     alignItems: 'center',
     justifyContent: 'center',
-    zIndex: 0
+    zIndex: 0,
+    [customTheme.breakpoints.down('sm')]:{
+      padding: '50px 25px',
+    },
   },
   container: {
     maxWidth: '1170px',
@@ -41,7 +44,8 @@ const styles = (customTheme) => ({
   aboutCard: {
     borderRadius: customTheme.typography.pxToRem(500),
     width: customTheme.typography.pxToRem(200),
-    height:  customTheme.typography.pxToRem(200)
+    height:  customTheme.typography.pxToRem(200),
+    margin: 'auto'
   }
 });
 

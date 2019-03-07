@@ -6,14 +6,19 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
+import theme from '../styles/theme'
 
-const styles = () => ({
+
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
     padding: '25px 50px',
     alignItems: 'center',
     justifyContent: 'center',
-    zIndex: 0
+    zIndex: 0,
+    [theme.breakpoints.down('sm')]:{
+      padding: '25px',
+    },
   },
   container: {
     maxWidth: '1170px',

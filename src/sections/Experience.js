@@ -4,12 +4,13 @@ import Grid from '@material-ui/core/Grid';
 import Title from '../component/Title';
 import ExperienceTile from '../component/ExpTile';
 import ExperienceCard from '../component/ExpCard';
+import theme from '../styles/theme'
 
 
-const styles = () => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
-    padding: '25px 50px',
+    padding: '25px 25px',
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0
