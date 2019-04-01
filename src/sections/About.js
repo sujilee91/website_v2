@@ -45,7 +45,15 @@ const styles = (customTheme) => ({
     borderRadius: customTheme.typography.pxToRem(500),
     width: customTheme.typography.pxToRem(200),
     height:  customTheme.typography.pxToRem(200),
-    margin: 'auto'
+    margin: 'auto',
+    [customTheme.breakpoints.down('sm')]:{
+      width: customTheme.typography.pxToRem(100),
+    height:  customTheme.typography.pxToRem(100),
+    },
+    [customTheme.breakpoints.down('md')]:{
+      width: customTheme.typography.pxToRem(150),
+    height:  customTheme.typography.pxToRem(150),
+    },
   }
 });
 
@@ -66,12 +74,12 @@ class About extends React.Component{
 
   render(){
   return (
-    <div className={this.props.classes.root}>
+    <div className={this.props.classes.root} name="About">
       <div className={this.props.classes.container}>
         <Title value={'About'}/>
         <MuiThemeProvider theme={customTheme}>
           <Grid container spacing={24} className={this.props.classes.cards}>
-            <Grid item lg={3} md={3} xs={12}>
+            <Grid item md={3} sm={6} xs={6}>
               <Card className={this.props.classes.aboutCard}>
                 <CardContent>
                   <div>
@@ -80,7 +88,7 @@ class About extends React.Component{
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item lg={3} md={3} xs={12}>
+            <Grid item md={3} sm={6} xs={6}>
               <Card className={this.props.classes.aboutCard}>
                 <CardContent>
                   <div>
@@ -90,7 +98,7 @@ class About extends React.Component{
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item lg={3} md={3} xs={12}>
+            <Grid item md={3} sm={6} xs={6}>
               <Card className={this.props.classes.aboutCard}>
                 <CardContent>
                   <div>
@@ -100,7 +108,7 @@ class About extends React.Component{
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item lg={3} md={3} xs={12}>
+            <Grid item md={3} sm={6} xs={6}>
               <Card className={this.props.classes.aboutCard}>
                 <CardContent>
                   <div>

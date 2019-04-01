@@ -11,7 +11,7 @@ const styles = (customTheme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0,
-    padding: '25px 50px 50px',
+    padding: '50px 50px',
     marginBottom: '50px',
     [customTheme.breakpoints.down('sm')]:{
       padding: '50px 25px',

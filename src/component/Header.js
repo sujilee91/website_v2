@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
 import customTheme from '../styles/theme'
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 const styles = (customTheme) => ({
   root: {
@@ -34,10 +36,34 @@ function HeadBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
           <Hidden smDown={true} className={classes.main}>
-            <Button color="inherit"> ABOUT </Button>
-            <Button color="inherit"> EXPERIENCE </Button>
-            <Button color="inherit"> WORK </Button>
-            <Button color="inherit">CONTACT</Button>
+            <Button color="inherit" onClick={()=>{ 
+              scroller.scrollTo('About', {
+                duration: 1000,
+                delay: 100,
+                smooth: true,
+                offset: -50
+              })}}> ABOUT </Button>
+            <Button color="inherit" onClick={()=>{ 
+              scroller.scrollTo('Experience', {
+                duration: 1000,
+                delay: 100,
+                smooth: true,
+                offset: -50
+              })}}> EXPERIENCE </Button>
+            <Button color="inherit" onClick={()=>{ 
+              scroller.scrollTo('Project', {
+                duration: 1000,
+                delay: 100,
+                smooth: true,
+                offset: -50
+              })}}> PROJECT + SKILLS </Button>
+            <Button color="inherit" onClick={()=>{ 
+              scroller.scrollTo('Contact', {
+                duration: 1000,
+                delay: 100,
+                smooth: true,
+                offset: -50
+              })}}>CONTACT</Button>
           </Hidden>
         </Toolbar>
       </AppBar>

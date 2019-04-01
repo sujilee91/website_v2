@@ -5,7 +5,7 @@ import About from '../sections/About';
 import Main from '../sections/Main';
 import Experience from '../sections/Experience';
 import Education from '../sections/Education';
-import Footer from '../component/Footer';
+import Footer from './Footer';
 import Project from '../sections/Projects';
 import Skill from '../sections/Skills';
 import Grid from '@material-ui/core/Grid';

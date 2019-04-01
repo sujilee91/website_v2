@@ -10,8 +10,8 @@ import theme from '../styles/theme'
 const styles = (theme) => ({
   root: {
     flexGrow: 1,
-    paddingTop: '100px',
-    paddingBottom: '100px',
+    paddingTop: '50px',
+    paddingBottom: '50px',
     backgroundColor: '#FAFAFA',
     alignItems: 'center',
     justifyContent: 'center',
@@ -21,7 +21,7 @@ const styles = (theme) => ({
     maxWidth: '1170px',
     margin: 'auto',
     backgroundColor: 'inherit',
-    paddingLeft: theme.typography.pxToRem(50),
+    padding: '50px 25px',
     marginTop: theme.typography.pxToRem(100),
     [theme.breakpoints.down('sm')]:{
       paddingLeft: theme.typography.pxToRem(20),
@@ -30,6 +30,9 @@ const styles = (theme) => ({
   },
   title1: {
     color: '#484848',
+    [theme.breakpoints.down('sm')]:{
+      fontSize: theme.typography.pxToRem(70),
+    },
   },
   title2: {
     paddingTop: '15px',

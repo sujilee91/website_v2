@@ -41,7 +41,7 @@ const customTheme = createMuiTheme({
     },
     h1: {
       fontFamily: ['Open Sans'],
-      fontSize: 65,
+      fontSize: 75,
       fontWeight: 700,
       lineHeight: 1.04,
       letterSpacing: 0
@@ -69,7 +69,12 @@ const customTheme = createMuiTheme({
     },
     body1: {
       fontFamily: ['Oxygen'],
-      fontSize: 18
+      fontSize: 15
+    },
+    body2: {
+      fontFamily: ['Noto Sans JP'],
+      fontWeight: '600',
+      fontSize: 15,
     },
     button: {
       fontFamily: ['Roboto'],

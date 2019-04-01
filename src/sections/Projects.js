@@ -3,11 +3,11 @@ import { withStyles, MuiThemeProvider , Grid, Card, CardContent, CardActions, Ty
 import Title from '../component/Title';
 import websiteV1 from '../images/website_v1.gif';
 import websiteV2 from '../images/web_v2.gif';
-import customeTheme from '../styles/theme';
+import theme from '../styles/theme';
 import colorTheme from '../images/colorTheme.png';
 import fonts from '../images/fonts.png';
-import theme from '../styles/theme'
-const styles = () => ({
+
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
     padding: '25px 50px',
@@ -27,9 +27,31 @@ const styles = () => ({
     padding: '10px 30px',
     justifyContent: 'center'
   },
-  imageContianer:{},
+  imageContianer:{
+    textAlign: 'center',
+    margin: 'auto'
+  },
   image: {
-    width: '100%',
+    width: '85%',
+    padding: '10px',
+  },
+  typo: {
+    textAlign: 'center',
+    margin: 'auto',
+    '& span': {
+      padding: '0px 10px',
+    }
+  },
+  typo2: {
+    textAlign: 'center',
+    margin: 'auto',
+    paddingTop: '15px',
+    '& span': {
+      padding: '0px 10px',
+    }
+  },
+  section: {
+    padding: '15px 0px'
   }
 });
 
@@ -50,10 +72,10 @@ class Project extends React.Component{
   }
 
   render(){
-    const { classes } = this.props
+    const { classes, fullScreen } = this.props
   return (
     <MuiThemeProvider theme={theme}>
-      <div className={classes.root}>
+      <div className={classes.root} name="Project">
         <div className={classes.container}>
           <Title value={'Latest Projects'}/>
           <Grid container spacing={40}>
@@ -84,30 +106,74 @@ class Project extends React.Component{
                 onClose={this.handleClose}
                 scroll={'paper'}
                 aria-labelledby="web2Dialog"
+                fullScreen={fullScreen}
               >
-                <DialogTitle id="web2Dialog">Personal Website v2</DialogTitle>
+                <DialogTitle id="web2Dialog" style={{backgroundColor: theme.palette.primary.main}}>
+                  <Typography variant='title' style={{color: theme.palette.primary.contrastText}}>
+                    Personal Website v2
+                  </Typography>
+                </DialogTitle>
                 <DialogContent>
-                  <Typography variant='display4'>
-                    Planning & Inspiration
-                  </Typography>
-                  <Typography variant='display4'>
-                    Theme & Customization
-                  </Typography>
-                  <img src={colorTheme} alt={'colorTheme'} className={this.props.classes.image}/>
-                  <DialogContentText variant={"body1"}>
-                    <Typography variant={"body1"}>
-                      These are the colors used in the new version website. 
-                      The colors has chosen from that I have built, and implmented as primar and secondary color in materal ui theme.
+                  <div className={classes.section}>
+                    <Typography variant='display4'>
+                      Planning & Inspiration
                     </Typography>
-                  </DialogContentText>
-                  <Typography variant={"h1"}>H1</Typography>
-                  <Typography variant={"h2"}>H2</Typography>
-                  <Typography variant={"h3"}>H3</Typography>
-                  <Typography variant={"h4"}>H4</Typography>
-                  <Typography variant={"display1"}>Display1</Typography>
-                  <Typography variant={"display2"}>Display2</Typography>
-                  <Typography variant={"display3"}>Display3</Typography>
-                  <Typography variant={"display4"}>Display4</Typography>
+                    <Typography variant={"body1"}>
+                      <p>
+                        In 2017 I have created my personal website that was built based on Bootstrap template. 
+                        At that time, I have minimum knowledge on frontend frameworks, and JavaScript libraries.
+                      </p>
+                      <p>
+                        Fast forward, in 2019, I felt it is kind of shame to use free template for personal website as a frontend developer, and it is time to build it by my own
+                        because I believe I have ability and skills to build my website from the scratch.
+                      </p>
+                      <p>
+                        I inspired by my resume that I built with Adobe illustrator, and thats where I started.
+                      </p> 
+                    </Typography>
+                  </div>
+                  <div className={classes.section}>
+                    <Typography variant='display4'>
+                      Theme & Customization
+                    </Typography>
+                    <div className={classes.imageContianer}>
+                      <img src={colorTheme} alt={'colorTheme'} className={this.props.classes.image} align="middle"/>
+                    </div>
+                    <Typography variant={"body1"}>
+                      <p>
+                        Picking primary/secondary color wasn't that hard since I already have my resume that I am decided to using for my personal website. 
+                      </p>
+                      <p>
+                        After getting hex of these colors, I implemented on these theme colors on Material-ui framework. 
+                      </p>
+                    </Typography>
+                    <div className={classes.typo}>
+                      <span style={theme.typography.h1}>H1</span>
+                      <span style={theme.typography.h2}>H2</span>
+                      <span style={theme.typography.h3}>H3</span>
+                      <span style={theme.typography.h4}>H4</span>
+                    </div>
+                    <div className={classes.typo}>
+                      <span style={theme.typography.display1}>Display1</span>
+                      <span style={theme.typography.display2}>Display2</span>
+                      <span style={theme.typography.display3}>Display3</span>
+                      <span style={theme.typography.display4}>Display4</span>
+                    </div>
+                    <div className={classes.typo2}>
+                      <span style={theme.typography.body1}>Body1</span>
+                      <span style={theme.typography.body2}>Body2</span>
+                      <span style={theme.typography.button}>Button</span>
+                    </div>
+                    <Typography variant={"body1"}>
+                      <p >
+                        Picking font is always fun but when it comes to put it together, it gets little tricky.
+
+                      </p>
+                      <p>
+                        
+                      </p>
+                    </Typography>
+                  </div>
                 </DialogContent>
                 <DialogActions>
                   <Button onClick={this.handleClose} color="primary" autoFocus>
@@ -167,4 +233,4 @@ class Project extends React.Component{
     )}
 }
 
-export default withStyles(styles)(Project);
+export default withMobileDialog()(withStyles(styles)(Project));

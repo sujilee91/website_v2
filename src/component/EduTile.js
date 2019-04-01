@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import customTheme from '../styles/theme'
-import { CardContent } from '@material-ui/core';
+import { CardContent, MuiThemeProvider, Typography } from '@material-ui/core';
 
 const styles = (customTheme) => ({
   degree: {
@@ -82,18 +82,19 @@ class EducationTile extends React.Component {
     }
 
     return (
+      <MuiThemeProvider theme={customTheme}>
         <Grid item xs={12} md={4}>
           <Card elevation={0} classes={{ root: cardClasses.join(' ') }}>
             <CardContent className={classes.frontCard}>
-              <div style={customTheme.typography.display2}>
+              <Typography variant={"display2"}>
                 {location}
-              </div>
-              <div style={customTheme.typography.display1}>
+              </Typography>
+              <Typography variant={"display1"}>
                 {schoolName}
-              </div>
-              <div className={classes.degree}>
+              </Typography>
+              <Typography variant={"body2"}>
                 {degree}
-              </div>
+              </Typography>
               <div className={classes.award}>
                 {award}
               </div>
@@ -101,11 +102,9 @@ class EducationTile extends React.Component {
                 {date}
               </div>
             </CardContent>
-            <CardContent className={classes.backCard}>
-              {description}
-            </CardContent>
           </Card>
         </Grid>
+      </MuiThemeProvider>
     )
   }
 }

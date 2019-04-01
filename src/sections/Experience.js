@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, MuiThemeProvider } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Title from '../component/Title';
 import ExperienceTile from '../component/ExpTile';
@@ -10,10 +10,13 @@ import theme from '../styles/theme'
 const styles = (theme) => ({
   root: {
     flexGrow: 1,
-    padding: '25px 25px',
+    padding: '25px 50px',
     alignItems: 'center',
     justifyContent: 'center',
-    zIndex: 0
+    zIndex: 0,
+    [theme.breakpoints.down('sm')]:{
+      padding: '25px',
+    },
   },
   container: {
     maxWidth: '1170px',
@@ -46,7 +49,7 @@ class Experiences extends React.Component {
     };
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} name="Experience">
         <div className={classes.container}>
           <Title value={'Experience'}/>
           <Grid container={true} spacing={40}>
