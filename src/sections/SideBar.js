@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-
 const styles = {
   root: {
     height: '100%',
@@ -37,14 +36,7 @@ function SideBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <Paper elevation={0}>
-        <div>
-          Front-end
-        </div>
-        <Typography variant="h5">
-          UX/UI Developer 
-        </Typography>
-      </Paper>
+      
     </div>
   );
 }

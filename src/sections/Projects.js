@@ -5,6 +5,7 @@ import websiteV1 from '../images/website_v1.gif';
 import websiteV2 from '../images/web_v2.gif';
 import theme from '../styles/theme';
 import colorTheme from '../images/colorTheme.png';
+import xd from '../images/xd.png';
 import fonts from '../images/fonts.png';
 
 const styles = (theme) => ({
@@ -85,10 +86,10 @@ class Project extends React.Component{
                   <div className={classes.imageContainer}>
                     <img src={websiteV2} className={classes.image}/>
                   </div>
-                  <Typography variant="body">
+                  <Typography variant="body2">
                       Personal Website v2
                   </Typography>
-                  <Typography variant="body" className={this.props.classes.description}>
+                  <Typography variant="body1" className={this.props.classes.description}>
                       Create 2nd version of personal website based on PDF form resume.
                       <span className={this.props.classes.specs}>
                         ReactJS, Material UI, Adobe XD
@@ -116,20 +117,41 @@ class Project extends React.Component{
                 <DialogContent>
                   <div className={classes.section}>
                     <Typography variant='display4'>
-                      Planning & Inspiration
+                      Inspiration
                     </Typography>
                     <Typography variant={"body1"}>
                       <p>
-                        In 2017 I have created my personal website that was built based on Bootstrap template. 
-                        At that time, I have minimum knowledge on frontend frameworks, and JavaScript libraries.
+                        In 2017, I created my first personal website. 
+                        At that time, I have minimum knowledge on frontend frameworks, and JavaScript libraries, 
+                        so the best options that I had was using Bootstrap template. Simple, easy, and fast.
                       </p>
                       <p>
-                        Fast forward, in 2019, I felt it is kind of shame to use free template for personal website as a frontend developer, and it is time to build it by my own
-                        because I believe I have ability and skills to build my website from the scratch.
+                        It been kind of shame for me to use free template for personal website as a frontend developer.
+                        Bootstrap template is surely simple, clean, and easy but can never a thing that I can be proud of.
                       </p>
                       <p>
-                        I inspired by my resume that I built with Adobe illustrator, and thats where I started.
+                        As starting of 2019, I knew it is time to build it by my own. I believed that I have ability and skills to build my website from the scratch,
+                        and I already have awesome resume that I can transfer into a website version!
                       </p> 
+                    </Typography>
+                  </div>
+                  <div className={classes.section}>
+                    <Typography variant='display4'>
+                      Planning
+                    </Typography>
+                    <Typography variant={"body1"}>
+                      <p>
+                        Even I already have my resume that I inspired by, it still needs to be transformed like a website.
+                        That is where I show my Adobe XD skills! 
+                      </p>
+                    </Typography>
+                    <div className={classes.imageContianer}>
+                      <img src={websiteV2} height="180px" width="250px"/>
+                    </div>
+                    <Typography variant={"body1"}>
+                      <p>
+                        After building rough sketch / wireframe of website, I moved on to specify color selections and font styles.
+                      </p>
                     </Typography>
                   </div>
                   <div className={classes.section}>
@@ -137,7 +159,7 @@ class Project extends React.Component{
                       Theme & Customization
                     </Typography>
                     <div className={classes.imageContianer}>
-                      <img src={colorTheme} alt={'colorTheme'} className={this.props.classes.image} align="middle"/>
+                      <img src={colorTheme} alt={'colorTheme'} className={classes.image} align="middle"/>
                     </div>
                     <Typography variant={"body1"}>
                       <p>
@@ -167,10 +189,7 @@ class Project extends React.Component{
                     <Typography variant={"body1"}>
                       <p >
                         Picking font is always fun but when it comes to put it together, it gets little tricky.
-
-                      </p>
-                      <p>
-                        
+                        I have used google fonts, got 10 different font families, end up using only 6.
                       </p>
                     </Typography>
                   </div>
@@ -188,10 +207,10 @@ class Project extends React.Component{
                   <div className={this.props.classes.imageContianer}>
                     <img src={websiteV1} className={this.props.classes.image} alt={'Website V1'}/>
                   </div>
-                  <Typography variant="body">
+                  <Typography variant="body2">
                       Personal Website v1
                   </Typography>
-                  <Typography variant="body" className={this.props.classes.description}>
+                  <Typography variant="body1" className={this.props.classes.description}>
                       Create 1st personal website using Bootstrap template
                       <span className={this.props.classes.specs}>
                         Bootstrap Template, JS

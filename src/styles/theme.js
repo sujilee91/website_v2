@@ -11,12 +11,8 @@ const customTheme = createMuiTheme({
         'Hind',
         'Roboto',
         'Open Sans',
-        'Arial',
-        'sans-serif',
         'Source Sans Pro',
-        'Fira Sans',
         'Oxygen',
-        'Hind Siliguri'
       ].join(','),
     display1: {
       fontFamily: ['Hind Vadodara'],
@@ -72,7 +68,6 @@ const customTheme = createMuiTheme({
       fontSize: 15
     },
     body2: {
-      fontFamily: ['Noto Sans JP'],
       fontWeight: '600',
       fontSize: 15,
     },

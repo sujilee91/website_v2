@@ -125,14 +125,15 @@ class About extends React.Component{
                 View Resume
               </Button>
               <Dialog
-                fullScreen={this.props.children}
                 open={this.state.openDialog}
                 onClose={this.handleClose}
                 scroll={'paper'}
                 aria-labelledby="ResumeDialog"
+                maxWidth={'md'}
+                fullWidth={true}
                 >
-                <DialogContent>
-                  
+                <DialogContent className={this.props.classes.dialog}>
+                  <embed src="./SJLEE.pdf" width="100%" height="700px" type="application/pdf"/> 
                 </DialogContent>
                 <DialogActions>
                   <Button onClick={this.handleClose} color="primary" autoFocus>
