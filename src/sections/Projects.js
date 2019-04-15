@@ -1,12 +1,13 @@
 import React from 'react';
 import { withStyles, MuiThemeProvider , Grid, Card, CardContent, CardActions, Typography, Dialog, Button, DialogActions, DialogContent, DialogContentText, DialogTitle, withMobileDialog } from '@material-ui/core';
 import Title from '../component/Title';
-import websiteV1 from '../images/website_v1.gif';
-import websiteV2 from '../images/web_v2.gif';
+import websiteV1 from '../images/website_v1.png';
+import websiteV2 from '../images/website_v2.png'
 import theme from '../styles/theme';
-import colorTheme from '../images/colorTheme.png';
-import xd from '../images/xd.png';
-import fonts from '../images/fonts.png';
+import WebV2 from '../contents/WebV2'
+import WebV1 from '../contents/WebV1'
+import DSScreen from '../images/clinicScreen.png'
+import IconWork from '../images/icons/icon.png'
 
 const styles = (theme) => ({
   root: {
@@ -32,9 +33,16 @@ const styles = (theme) => ({
     textAlign: 'center',
     margin: 'auto'
   },
+  imageTextContianer:{
+    margin: 'auto',
+    display: 'inline-grid',
+    gridTemplateColumns: 'auto auto'
+  },
   image: {
-    width: '85%',
-    padding: '10px',
+    width: '100%',
+    height: 'auto',
+    minHeight: '160px',
+    padding: '10px 0px',
   },
   typo: {
     textAlign: 'center',
@@ -53,6 +61,26 @@ const styles = (theme) => ({
   },
   section: {
     padding: '15px 0px'
+  },
+  iconMargin: {
+    margin: '10px',
+    backgroundColor: 'white',
+    boxShadow: 'none',
+    fontSize: '20px'
+  },
+  iconMarginRight: {
+    marginRight: '10px',
+    backgroundColor: 'white',
+    boxShadow: 'none',
+    fontSize: '20px'
+  },
+  iconContainer: {
+    textAlign: 'center'
+  },
+  viewMore: {
+    fontSize: '1rem',
+    justifyContent: 'center',
+    alignItems:'center'
   }
 });
 
@@ -90,14 +118,14 @@ class Project extends React.Component{
                       Personal Website v2
                   </Typography>
                   <Typography variant="body1" className={this.props.classes.description}>
-                      Create 2nd version of personal website based on PDF form resume.
-                      <span className={this.props.classes.specs}>
-                        ReactJS, Material UI, Adobe XD
-                      </span>
+                    2nd version of personal website using React, Materil UI.<br/><br/>
+                    <em>
+                      ReactJS, Material UI, Adobe XD
+                    </em>
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button onClick={()=>{this.setState({open: !this.state.open, type:'web2'})}}>
+                  <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'web2'})}} color={"primary"} size={'small'} fullWidth={true}>
                     View More
                   </Button>
                 </CardActions>
@@ -114,86 +142,91 @@ class Project extends React.Component{
                     Personal Website v2
                   </Typography>
                 </DialogTitle>
-                <DialogContent>
-                  <div className={classes.section}>
-                    <Typography variant='display4'>
-                      Inspiration
-                    </Typography>
-                    <Typography variant={"body1"}>
-                      <p>
-                        In 2017, I created my first personal website. 
-                        At that time, I have minimum knowledge on frontend frameworks, and JavaScript libraries, 
-                        so the best options that I had was using Bootstrap template. Simple, easy, and fast.
-                      </p>
-                      <p>
-                        It been kind of shame for me to use free template for personal website as a frontend developer.
-                        Bootstrap template is surely simple, clean, and easy but can never a thing that I can be proud of.
-                      </p>
-                      <p>
-                        As starting of 2019, I knew it is time to build it by my own. I believed that I have ability and skills to build my website from the scratch,
-                        and I already have awesome resume that I can transfer into a website version!
-                      </p> 
-                    </Typography>
+                <WebV2 />
+                <DialogActions>
+                  <Button onClick={this.handleClose} color="primary" autoFocus>
+                    Close
+                  </Button>
+                </DialogActions>
+              </Dialog>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card elevation={0}>
+                <CardContent>
+                  <div className={classes.imageContainer}>
+                    <img src={DSScreen} className={classes.image}/>
                   </div>
-                  <div className={classes.section}>
-                    <Typography variant='display4'>
-                      Planning
-                    </Typography>
-                    <Typography variant={"body1"}>
-                      <p>
-                        Even I already have my resume that I inspired by, it still needs to be transformed like a website.
-                        That is where I show my Adobe XD skills! 
-                      </p>
-                    </Typography>
-                    <div className={classes.imageContianer}>
-                      <img src={websiteV2} height="180px" width="250px"/>
-                    </div>
-                    <Typography variant={"body1"}>
-                      <p>
-                        After building rough sketch / wireframe of website, I moved on to specify color selections and font styles.
-                      </p>
-                    </Typography>
+                  <Typography variant="body2">
+                      Clinic Website v2
+                  </Typography>
+                  <Typography variant="body1" className={this.props.classes.description}>
+                    Clinic business website in Korean using React, Material Ui<br/><br/>
+                    <em>
+                      ReactJS, Material UI, Adobe XD
+                    </em>
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'web2'})}} color={"primary"} size={'small'} fullWidth={true}>
+                    View More
+                  </Button>
+                </CardActions>
+              </Card>
+              <Dialog
+                open={this.state.open && this.state.type==='web2'}
+                onClose={this.handleClose}
+                scroll={'paper'}
+                aria-labelledby="web2Dialog"
+                fullScreen={fullScreen}
+              >
+                <DialogTitle id="web2Dialog" style={{backgroundColor: theme.palette.primary.main}}>
+                  <Typography variant='title' style={{color: theme.palette.primary.contrastText}}>
+                    Personal Website v2
+                  </Typography>
+                </DialogTitle>
+                <WebV2 />
+                <DialogActions>
+                  <Button onClick={this.handleClose} color="primary" autoFocus>
+                    Close
+                  </Button>
+                </DialogActions>
+              </Dialog>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card elevation={0}>
+                <CardContent>
+                  <div className={classes.imageContainer}>
+                    <img src={IconWork} className={classes.image}/>
                   </div>
-                  <div className={classes.section}>
-                    <Typography variant='display4'>
-                      Theme & Customization
-                    </Typography>
-                    <div className={classes.imageContianer}>
-                      <img src={colorTheme} alt={'colorTheme'} className={classes.image} align="middle"/>
-                    </div>
-                    <Typography variant={"body1"}>
-                      <p>
-                        Picking primary/secondary color wasn't that hard since I already have my resume that I am decided to using for my personal website. 
-                      </p>
-                      <p>
-                        After getting hex of these colors, I implemented on these theme colors on Material-ui framework. 
-                      </p>
-                    </Typography>
-                    <div className={classes.typo}>
-                      <span style={theme.typography.h1}>H1</span>
-                      <span style={theme.typography.h2}>H2</span>
-                      <span style={theme.typography.h3}>H3</span>
-                      <span style={theme.typography.h4}>H4</span>
-                    </div>
-                    <div className={classes.typo}>
-                      <span style={theme.typography.display1}>Display1</span>
-                      <span style={theme.typography.display2}>Display2</span>
-                      <span style={theme.typography.display3}>Display3</span>
-                      <span style={theme.typography.display4}>Display4</span>
-                    </div>
-                    <div className={classes.typo2}>
-                      <span style={theme.typography.body1}>Body1</span>
-                      <span style={theme.typography.body2}>Body2</span>
-                      <span style={theme.typography.button}>Button</span>
-                    </div>
-                    <Typography variant={"body1"}>
-                      <p >
-                        Picking font is always fun but when it comes to put it together, it gets little tricky.
-                        I have used google fonts, got 10 different font families, end up using only 6.
-                      </p>
-                    </Typography>
-                  </div>
-                </DialogContent>
+                  <Typography variant="body2">
+                    Design Works
+                  </Typography>
+                  <Typography variant="body1" className={this.props.classes.description}>
+                    From personal resume to icon creation using Adobe Illustrator<br/><br/>
+                    <em>
+                      Adobe Illustrator
+                    </em>
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'web2'})}} color={"primary"} size={'small'} fullWidth={true}>
+                    View More
+                  </Button>
+                </CardActions>
+              </Card>
+              <Dialog
+                open={this.state.open && this.state.type==='web2'}
+                onClose={this.handleClose}
+                scroll={'paper'}
+                aria-labelledby="web2Dialog"
+                fullScreen={fullScreen}
+              >
+                <DialogTitle id="web2Dialog" style={{backgroundColor: theme.palette.primary.main}}>
+                  <Typography variant='title' style={{color: theme.palette.primary.contrastText}}>
+                    Personal Website v2
+                  </Typography>
+                </DialogTitle>
+                <WebV2 />
                 <DialogActions>
                   <Button onClick={this.handleClose} color="primary" autoFocus>
                     Close
@@ -211,33 +244,29 @@ class Project extends React.Component{
                       Personal Website v1
                   </Typography>
                   <Typography variant="body1" className={this.props.classes.description}>
-                      Create 1st personal website using Bootstrap template
-                      <span className={this.props.classes.specs}>
-                        Bootstrap Template, JS
-                      </span>
+                      1st personal website using Bootstrap template.<br/><br/>
+                      <em>Bootstrap, JS, CSS</em>
                     </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button onClick={()=>{this.setState({open: !this.state.open, type:'web1'})}}>
+                  <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'web1'})}} color={"primary"} size={'small'} fullWidth={true}>
                     View More
                   </Button>
                 </CardActions>
               </Card>
               <Dialog
-                fullScreen={this.props.children}
                 open={this.state.open && this.state.type==='web1'}
                 onClose={this.handleClose}
                 scroll={'paper'}
                 aria-labelledby="web1Dialog"
-                >
-                <DialogTitle id="web21ialog">Personal Website v1</DialogTitle>
-                <DialogContent>
-                  <DialogContentText>
-                    <Typography>
-                      Planning
-                    </Typography>
-                  </DialogContentText>
-                </DialogContent>
+                fullScreen={fullScreen}
+              >
+                <DialogTitle id="web1Dialog" style={{backgroundColor: theme.palette.primary.main}}>
+                  <span style={theme.typography.h6}>
+                    Personal Website v1
+                  </span>
+                </DialogTitle>
+                <WebV1/>
                 <DialogActions>
                   <Button onClick={this.handleClose} color="primary" autoFocus>
                     Close

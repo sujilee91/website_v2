@@ -86,10 +86,10 @@ class EducationTile extends React.Component {
         <Grid item xs={12} md={4}>
           <Card elevation={0} classes={{ root: cardClasses.join(' ') }}>
             <CardContent className={classes.frontCard}>
-              <Typography variant={"display2"}>
+              <Typography variant={"subtitle1"}>
                 {location}
               </Typography>
-              <Typography variant={"display1"}>
+              <Typography variant={"h5"}>
                 {schoolName}
               </Typography>
               <Typography variant={"body2"}>

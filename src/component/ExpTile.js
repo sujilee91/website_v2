@@ -72,15 +72,15 @@ class ExperienceTile extends React.Component {
         <div className={classes.root} onClick={onClick}>
           <Grid container spacing={8}>
             <Grid item sm={2} xs={3}>
-              {year && (<Typography className={classes.year} variant={"display1"}>{year}</Typography>)}
-              {(from || to) && (<Typography className={classes.date} style={customTheme.typography.display3}>{from} - {to}</Typography>)}
+              {year && (<Typography className={classes.year} variant={"h5"}>{year}</Typography>)}
+              {(from || to) && (<Typography className={classes.date} style={customTheme.typography.subtitle2}>{from} - {to}</Typography>)}
             </Grid>
             <Grid item sm={2} xs={1} className={classes.vdContainer}>
               <div className={classes.verticalDivider}></div>
             </Grid>
             <Grid item sm={8} xs={8}>
-              {title && (<Typography className={classes.title} variant={"display1"} >{title}</Typography>)}
-              {company && (<Typography className={classes.company} style={customTheme.typography.display2}>{company}</Typography>)}
+              {title && (<Typography className={classes.title} variant={"h5"} >{title}</Typography>)}
+              {company && (<Typography className={classes.company} style={customTheme.typography.subtitle1}>{company}</Typography>)}
               {description && (
                 <Typography className={classes.description} variant={'body1'}>
                 {description.map((desc)=> {

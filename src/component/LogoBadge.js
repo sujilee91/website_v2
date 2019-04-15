@@ -20,9 +20,13 @@ const styles = (theme) => ({
     maxWidth: '16.666667%',
     flexBasis: '16.666667%',
     width: '100%',
+    top: '-30px',
+    [theme.breakpoints.down('md')]:{
+        top: '-60px',
+    }
   },
   badge: {
-      height: '350px',
+      height: '380px',
       width: 'auto',
   }
 });

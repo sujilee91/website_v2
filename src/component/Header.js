@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import customTheme from '../styles/theme'
-import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import TitleWide from '../images/LeeTitleWide.png';
 
@@ -28,7 +27,7 @@ const styles = (customTheme) => ({
     marginRight: '20px'
   },
   main:{
-    font: customTheme.typography.display3
+    font: customTheme.typography.subtitle2
   },
   title: {
     position: 'absolute',

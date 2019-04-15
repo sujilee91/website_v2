@@ -1,11 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
-##Directories
-In this project, most of codes are located in `src`.
-in `src` there are 4 different directories: **component, images,sections, styles**.
-
-
+## 
 
 <!-- 
 

@@ -14,37 +14,9 @@ const customTheme = createMuiTheme({
         'Source Sans Pro',
         'Oxygen',
       ].join(','),
-    display1: {
-      fontFamily: ['Hind Vadodara'],
-      fontWeight: '900',
-      fontSize: 32,
-      color: primaryColor
-    },
-    display2: {
-      fontFamily: ['Roboto'],
-      fontWeight: '300',
-      fontSize: 15,
-    },
-    display3: {
-      fontFamily: ['Hind'],
-      fontWeight: '800',
-      fontSize: 13,
-    },
-    display4: {
-      fontFamily: ['Roboto'],
-      fontWeight: '600',
-      fontSize: 20,
-    },
     h1: {
       fontFamily: ['Open Sans'],
       fontSize: 75,
-      fontWeight: 700,
-      lineHeight: 1.04,
-      letterSpacing: 0
-    },
-    h3:{
-      fontFamily: ['Open Sans'],
-      fontSize: 30,
       fontWeight: 700,
       lineHeight: 1.04,
       letterSpacing: 0
@@ -56,12 +28,47 @@ const customTheme = createMuiTheme({
       lineHeight: 1.04,
       letterSpacing: 0
     },
+    h3:{
+      fontFamily: ['Open Sans'],
+      fontSize: 30,
+      fontWeight: 700,
+      lineHeight: 1.04,
+      letterSpacing: 0
+    },
     h4: {
       fontFamily: ['Hind Vadodara'],
       fontSize: 28,
       fontWeight: 800,
       lineHeight: 1.04,
       letterSpacing: 0
+    },
+    h5: {
+      fontFamily: ['Hind Vadodara'],
+      fontWeight: '900',
+      fontSize: 32,
+      color: primaryColor
+    },
+    h6: {
+      fontFamily: ['Hind Vadodara'],
+      fontSize: 37,
+      fontWeight: 300,
+      color: '#fff',
+      lineHeight: 0
+    },
+    subtitle1: {
+      fontFamily: ['Roboto'],
+      fontWeight: '300',
+      fontSize: 15,
+    },
+    subtitle2: {
+      fontFamily: ['Hind'],
+      fontWeight: '800',
+      fontSize: 13,
+    },
+    overline: {
+      fontFamily: ['Roboto'],
+      fontWeight: '600',
+      fontSize: 20,
     },
     body1: {
       fontFamily: ['Oxygen'],

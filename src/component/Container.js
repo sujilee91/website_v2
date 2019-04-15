@@ -53,13 +53,12 @@ class Container extends React.Component {
 
     return (
       <Grid container={true} spacing={0}>
-        <Hidden mdDown>
-          <Grid item={true} xs={12} lg={2} className={classes.sideBar}>
-            <SideBar/>
+        <Hidden smDown>
+          <Grid item={true} xs={12} md={2} className={classes.sideBar}>
             <LogoBadge title={title}/>
           </Grid>
         </Hidden>
-        <Grid item={true} xs={12} lg={10}>
+        <Grid item={true} xs={12} md={10}>
           <Main/>
           <Waypoint
             onEnter={()=>this.handleTitle('Efficient Coder')}
@@ -78,7 +77,7 @@ class Container extends React.Component {
           />
           <Skill/>
           <Waypoint
-            onEnter={()=>this.handleTitle('Debugger')}
+            onEnter={()=>this.handleTitle('Communicator')}
           />
           <Education/>
           <Footer/>
