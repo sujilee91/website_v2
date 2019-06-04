@@ -6,8 +6,10 @@ import websiteV2 from '../images/website_v2.png'
 import theme from '../styles/theme';
 import WebV2 from '../contents/WebV2'
 import WebV1 from '../contents/WebV1'
+import DS from '../contents/DS'
+import Design from '../contents/Design'
 import DSScreen from '../images/clinicScreen.png'
-import IconWork from '../images/icons/icon.png'
+import IconWork from '../images/icons/OJ.png'
 
 const styles = (theme) => ({
   root: {
@@ -39,10 +41,12 @@ const styles = (theme) => ({
     gridTemplateColumns: 'auto auto'
   },
   image: {
-    width: '100%',
+    width: 'auto',
     height: 'auto',
     minHeight: '160px',
+    maxHeight: '160px',
     padding: '10px 0px',
+    
   },
   typo: {
     textAlign: 'center',
@@ -166,14 +170,14 @@ class Project extends React.Component{
                     </em>
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'web2'})}} color={"primary"} size={'small'} fullWidth={true}>
+                {/* <CardActions>
+                  <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'DS'})}} color={"primary"} size={'small'} fullWidth={true}>
                     View More
                   </Button>
-                </CardActions>
+                </CardActions> */}
               </Card>
               <Dialog
-                open={this.state.open && this.state.type==='web2'}
+                open={this.state.open && this.state.type==='DS'}
                 onClose={this.handleClose}
                 scroll={'paper'}
                 aria-labelledby="web2Dialog"
@@ -184,7 +188,7 @@ class Project extends React.Component{
                     Personal Website v2
                   </Typography>
                 </DialogTitle>
-                <WebV2 />
+                <DS />
                 <DialogActions>
                   <Button onClick={this.handleClose} color="primary" autoFocus>
                     Close
@@ -199,7 +203,7 @@ class Project extends React.Component{
                     <img src={IconWork} className={classes.image}/>
                   </div>
                   <Typography variant="body2">
-                    Design Works
+                    Design Work
                   </Typography>
                   <Typography variant="body1" className={this.props.classes.description}>
                     From personal resume to icon creation using Adobe Illustrator<br/><br/>
@@ -208,11 +212,11 @@ class Project extends React.Component{
                     </em>
                   </Typography>
                 </CardContent>
-                <CardActions>
+                {/* <CardActions>
                   <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'web2'})}} color={"primary"} size={'small'} fullWidth={true}>
                     View More
                   </Button>
-                </CardActions>
+                </CardActions> */}
               </Card>
               <Dialog
                 open={this.state.open && this.state.type==='web2'}

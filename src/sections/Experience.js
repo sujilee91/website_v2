@@ -54,7 +54,7 @@ class Experiences extends React.Component {
           <Title value={'Experience'}/>
           <Grid container={true} spacing={40}>
             <Grid item={true} xs={12} md={8}>
-              <ExperienceTile year={'2018'} from={'July'} to={'Current'} title={'Frontend Developer'} company={'TapTapQuote'} divider={true} description={skillList.tap} 
+              <ExperienceTile year={'2018'} from={'July'} to={'Current'} title={'Frontend Developer'} company={'PaintScout'} divider={true} description={skillList.tap} 
                 onClick={()=>{
                   this.setState({selectedCard:'tap'})
                 }}/>

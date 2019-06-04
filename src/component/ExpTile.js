@@ -78,7 +78,7 @@ class ExperienceTile extends React.Component {
             <Grid item sm={2} xs={1} className={classes.vdContainer}>
               <div className={classes.verticalDivider}></div>
             </Grid>
-            <Grid item sm={8} xs={8}>
+            <Grid item sm={8} xs={8} className={classes.descCard}>
               {title && (<Typography className={classes.title} variant={"h5"} >{title}</Typography>)}
               {company && (<Typography className={classes.company} style={customTheme.typography.subtitle1}>{company}</Typography>)}
               {description && (

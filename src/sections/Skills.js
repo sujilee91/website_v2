@@ -67,10 +67,10 @@ const styles = (theme) => ({
 
 function Skill(props) {
   const { classes } = props;
-  const development1 = ['HTML5', 'SASS', 'CSS', 'ES6', 'ReactJS','AngularJS', 'PHP', 'Wordpress', 'JavaEE', 'jQuery', 'MySQL'];
+  const development1 = ['HTML5', 'SASS', 'CSS', 'ES6', 'Javascript', 'TypeScript', 'ReactJS','AngularJS', 'NodeJS','PHP', 'Wordpress', 'JavaEE', 'jQuery', 'MySQL'];
   const devExtra = ['Bitbucket / JIRA', 'Github', 'SourceTree'];
-  const uxUi = ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD']
-  const framework = ['Material-UI', 'Bootstrap' , 'Sementic UI']
+  const uxUi = ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD', 'Sketch']
+  const framework = ['Material-UI', 'Bootstrap' , 'Sementic UI', 'Ant Design']
   return (
     <div className={classes.root}>
       <div className={classes.container}>

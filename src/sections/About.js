@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import customTheme from '../styles/theme'
 import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Dialog from '@material-ui/core/Dialog';
@@ -11,6 +12,9 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import Typography from '@material-ui/core/Typography';
+import Beach from '../images/icons/Beach_edit.svg'
+import Camper from '../images/icons/Camp_Edit.svg'
+import Nomad from '../images/icons/Dev_Lee.svg'
 
 const styles = (customTheme) => ({
   root: {
@@ -42,18 +46,7 @@ const styles = (customTheme) => ({
     textAlign: 'center'
   },
   aboutCard: {
-    borderRadius: customTheme.typography.pxToRem(500),
-    width: customTheme.typography.pxToRem(200),
-    height:  customTheme.typography.pxToRem(200),
-    margin: 'auto',
-    [customTheme.breakpoints.down('sm')]:{
-      width: customTheme.typography.pxToRem(100),
-    height:  customTheme.typography.pxToRem(100),
-    },
-    [customTheme.breakpoints.down('md')]:{
-      width: customTheme.typography.pxToRem(150),
-    height:  customTheme.typography.pxToRem(150),
-    },
+    margin: 'auto'
   }
 });
 
@@ -78,45 +71,18 @@ class About extends React.Component{
       <div className={this.props.classes.container}>
         <Title value={'About'}/>
         <MuiThemeProvider theme={customTheme}>
-          <Grid container spacing={24} className={this.props.classes.cards}>
-            <Grid item md={3} sm={6} xs={6}>
-              <Card className={this.props.classes.aboutCard}>
-                <CardContent>
-                  <div>
-                    
-                  </div>
-                </CardContent>
-              </Card>
+          <Grid container spacing={0} className={this.props.classes.cards}>
+            <Grid item md={3} sm={6} xs={6} className={this.props.classes.aboutCard}>
+              <img src={Nomad} alt="RemoteWorker" width="90%"/>
             </Grid>
-            <Grid item md={3} sm={6} xs={6}>
-              <Card className={this.props.classes.aboutCard}>
-                <CardContent>
-                  <div>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                  </div>
-                </CardContent>
-              </Card>
+            <Grid item md={3} sm={6} xs={6} className={this.props.classes.aboutCard}>
+            <img src={Beach} alt="beach" width="90%"/>
             </Grid>
-            <Grid item md={3} sm={6} xs={6}>
-              <Card className={this.props.classes.aboutCard}>
-                <CardContent>
-                  <div>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                  </div>
-                </CardContent>
-              </Card>
+            <Grid item md={3} sm={6} xs={6} className={this.props.classes.aboutCard}>
+            <img src={Camper} alt="Camper" width="90%"/>
             </Grid>
-            <Grid item md={3} sm={6} xs={6}>
-              <Card className={this.props.classes.aboutCard}>
-                <CardContent>
-                  <div>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                  </div>
-                </CardContent>
-              </Card>
+            <Grid item md={3} sm={6} xs={6} className={this.props.classes.aboutCard}>
+            <img src={Beach} alt="beach" width="90%"/>
             </Grid>
           </Grid>
           <Grid container spacing={24} className={this.props.classes.buttonGrid}>

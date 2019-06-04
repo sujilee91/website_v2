@@ -27,7 +27,8 @@ const styles = (theme) => ({
   },
   specs: {
     marginTop: theme.typography.pxToRem(10),
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    display: 'block'
   }
 });
 
@@ -58,13 +59,13 @@ class ExperienceCard extends React.Component{
               </div>
               <CardContent>
                 <Typography gutterBottom variant="h3" component="h3">
-                    TapTapQuote
+                  PaintScout
                 </Typography>
                 <Typography component="p" className={classes.description}>
                     Create new component and page / Update page with responsiveness.
-                    <div className={classes.specs}>
+                    <span className={classes.specs}>
                       ReactJS, Typescript, Material-ui
-                    </div>
+                    </span>
                 </Typography>
               </CardContent>
             </Card>
@@ -82,9 +83,9 @@ class ExperienceCard extends React.Component{
                 </Typography>
                 <Typography component="p"  className={classes.description}>
                     Deliver new feature / Update existing page client Wordpress page, and Wordpress extension.
-                    <div className={classes.specs}>
+                    <span className={classes.specs}>
                       AngularJS, Angular Material, PHP, Wordpress
-                    </div>
+                    </span>
                   </Typography>
               </CardContent>
             </Card>
@@ -102,9 +103,9 @@ class ExperienceCard extends React.Component{
                 </Typography>
                 <Typography component="p"  className={classes.description}>
                   Participated on team project for client and content management.Create personal projects using React.
-                  <div className={classes.specs}>
+                  <span className={classes.specs}>
                     Bitbucket/Jira, SASS, ReactJS, CMS
-                  </div>
+                  </span>
                 </Typography>
               </CardContent>
             </Card>
@@ -122,9 +123,9 @@ class ExperienceCard extends React.Component{
                 </Typography>
                 <Typography component="p" className={classes.description}>
                   Build HTML5 based web, mobile App as a graduation project for oil & gas industry client.
-                  <div className={classes.specs}>
+                  <span className={classes.specs}>
                     Bootstrap, JavaEE, SpringMVC, MySQL
-                  </div>
+                  </span>
                 </Typography>
               </CardContent>
             </Card>
