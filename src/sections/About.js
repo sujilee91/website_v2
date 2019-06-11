@@ -85,7 +85,8 @@ class About extends React.Component{
               <img src={Beach} alt="beach"/>
               <Typography variant={"overline"} >Beach Lover</Typography>
               <Typography variant={"body1"} >
-                Absolutely love any activity related to beach. Boogieboarding, body surfing, tanning, and chill by the sun.
+                Absolutely love any activity related to beach. 
+                Boogieboarding, body surfing, tanning, and watching sunset.
               </Typography>
             </Grid>
             <Grid item md={3} sm={6} xs={12} className={this.props.classes.aboutCard}>
@@ -93,7 +94,7 @@ class About extends React.Component{
               <Typography variant={"overline"} >Camper</Typography>
               <Typography variant={"body1"} >
                 Beautiful scenary of Rockie mountain is in my backyard. 
-                Me & my husband camerized 1968 Dodge van so when its warm we are good to go adventure.
+                Me & my husband camerized 1968 Dodge van so when its warm, it's adventure time!
               </Typography>
             </Grid>
             <Grid item md={3} sm={6} xs={12} className={this.props.classes.aboutCard}>

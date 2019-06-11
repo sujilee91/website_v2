@@ -12,7 +12,6 @@ const styles = (theme) => ({
   root: {
     flexGrow: 1,
     paddingTop: '50px',
-    paddingBottom: '50px',
     backgroundColor: '#FAFAFA',
     alignItems: 'center',
     justifyContent: 'center',
@@ -22,7 +21,7 @@ const styles = (theme) => ({
     maxWidth: '1170px',
     margin: 'auto',
     backgroundColor: 'inherit',
-    padding: '50px 25px',
+    padding: '25px 25px 0 25px',
     marginTop: theme.typography.pxToRem(100),
     [theme.breakpoints.down('sm')]:{
       paddingLeft: theme.typography.pxToRem(20),
@@ -62,7 +61,15 @@ const styles = (theme) => ({
   iconContainer: {
     marginTop: '30px',
     marginBottom: '20px'
-  }
+  },
+  img: {
+    width: theme.typography.pxToRem(330),
+    [theme.breakpoints.down('sm')]:{
+      paddingTop: theme.typography.pxToRem(50),
+    },
+    display: 'block',
+    margin: 'auto'
+  },
 });
 
 function Main(props) {
@@ -95,6 +102,7 @@ function Main(props) {
             </div>
           </Grid>
           <Grid item={true} xs={12} sm={6}>
+            <img className={classes.img}src='./profile.png' alt="SJLEE"/>
           </Grid>
         </Grid>
       </div>
