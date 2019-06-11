@@ -6,8 +6,13 @@ import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import customTheme from '../styles/theme'
+import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
-import TitleWide from '../images/LeeTitleWide.png';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import Typography from '@material-ui/core/Typography';
 
 const styles = (customTheme) => ({
   root: {
@@ -24,7 +29,10 @@ const styles = (customTheme) => ({
   toolBar: {
     justifyContent: 'flex-end',
     padding: '5px',
-    marginRight: '20px'
+    marginRight: '20px',
+    [customTheme.breakpoints.down('md')]:{
+      marginRight: '0px'
+    }
   },
   main:{
     font: customTheme.typography.subtitle2
@@ -41,9 +49,34 @@ const styles = (customTheme) => ({
     // }
     left: '0px'
   },
-  titleWide: {
-    position: 'absolute',
+  badgeWrapper: {
+    zIndex: 1300,
+    height: 'auto',
+    position: 'fixed',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'start',
+    flexGrow: 0,
+    maxWidth: '16.666667%',
+    flexBasis: '16.666667%',
     width: '100%',
+    top: '0px',
+    [customTheme.breakpoints.down('md')]:{
+        maxWidth: '100%',
+        minWidth: '100%',
+        paddingTop: 0
+    }
+  },
+  badge: {
+      height: 'auto',
+      margin: 'auto',
+      [customTheme.breakpoints.down('md')]:{
+        width: '60%',
+    },
+    [customTheme.breakpoints.down('sm')]:{
+      width: '70%',
+      float: 'right'
+    }
   },
   titleGrid: {
     position: 'relative'
@@ -62,9 +95,15 @@ const styles = (customTheme) => ({
   }
 });
 
-function HeadBar(props) {
-  const { classes } = props;
-  return (
+class HeadBar extends React.Component {
+  state={
+    openMenu: false
+  }
+
+  render(){
+      const { classes } = this.props
+    const {openMenu} = this.state
+    return (
       <AppBar position="fixed" className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
             <Hidden smDown={true} className={classes.main}>
@@ -97,9 +136,79 @@ function HeadBar(props) {
                     offset: -50
                   })}}>CONTACT</Button>
               </Hidden>
+              {/* <Hidden mdUp={true} smDown={true}>
+                <div className={classes.badgeWrapper}>
+                  <img src="./LeeTitleWide.png" alt="title" className={classes.badge}/>
+                  <span key={props.title} className="title"> {props.title} </span>
+                </div>
+              </Hidden> */}
+              <Hidden smUp={true}>
+                <Button variant="text" color="inherit" className={classes.badgeWrapper} onClick={()=>{this.setState({openMenu: !openMenu})}}>
+                    <img src="./LeeTitleWide.png" alt="title" className={classes.badge}/>
+                </Button>
+                <SwipeableDrawer anchor="top" open={openMenu} onClose={()=>{this.setState({  openMenu: false })}} onOpen={()=>{this.setState({  openMenu: true })}}>
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    onClick={()=>{this.setState({  openMenu: false })}}
+                    onKeyDown={()=>{this.setState({  openMenu: false })}}
+                  >
+                    <List>
+                      <ListItem button key="About" onClick={()=>{ 
+                        scroller.scrollTo('About', {
+                          duration: 1000,
+                          delay: 100,
+                          smooth: true,
+                          offset: -50
+                        })}}>
+                        <Typography variant={"button"}>
+                          About
+                        </Typography>
+                      </ListItem>
+                      <Divider/>
+                      <ListItem button key="exp" onClick={()=>{ 
+                        scroller.scrollTo('Experience', {
+                          duration: 1000,
+                          delay: 100,
+                          smooth: true,
+                          offset:  -100
+                        })}}>
+                        <Typography  variant={"button"}>
+                          Experience
+                        </Typography>
+                      </ListItem>
+                      <Divider/>
+                      <ListItem button key="project" onClick={()=>{ 
+                        scroller.scrollTo('Project', {
+                          duration: 1000,
+                          delay: 100,
+                          smooth: true,
+                          offset: -100
+                        })}}>
+                        <Typography variant={"button"}>
+                          Project + Skills
+                        </Typography>
+                      </ListItem>
+                      <Divider/>
+                      <ListItem button key="edu" onClick={()=>{ 
+                        scroller.scrollTo('Contact', {
+                          duration: 1000,
+                          delay: 100,
+                          smooth: true,
+                          offset:  -100
+                        })}}>
+                        <Typography variant={"button"}>
+                          Contact
+                        </Typography>
+                      </ListItem>
+                    </List>
+                  </div>
+                </SwipeableDrawer>
+              </Hidden>
             </Toolbar>
       </AppBar>
-  );
+    );
+  }
 }
 
 export default withStyles(styles)(HeadBar);

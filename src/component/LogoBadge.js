@@ -34,7 +34,7 @@ const styles = (theme) => ({
 function LogoBadge(props) {
   const { classes } = props;
   return (
-    <div className={classes.badgeWrapper}>
+  <div className={classes.badgeWrapper}>
         <img src="./LeeTitle.svg" alt="title" className={classes.badge}/>
         <span key={props.title} className="title"> {props.title} </span>
     </div>

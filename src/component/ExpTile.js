@@ -56,43 +56,35 @@ const styles = (customTheme) => ({
   }
 });
 
-class ExperienceTile extends React.Component {
-  constructor(props) {
-    super(props)
+const ExperienceTile = (props) => {
+  const {classes, year, from, to, company, description, title, divider, onClick} = props;
 
-    this.state = {
-     handelClick: ''
-    }
-  };
-
-  render(){
-    const {classes, year, from, to, company, description, title, divider, onClick} = this.props;
-    return (    
-      <MuiThemeProvider theme={customTheme}>
-        <div className={classes.root} onClick={onClick}>
-          <Grid container spacing={8}>
-            <Grid item sm={2} xs={3}>
-              {year && (<Typography className={classes.year} variant={"h5"}>{year}</Typography>)}
-              {(from || to) && (<Typography className={classes.date} style={customTheme.typography.subtitle2}>{from} - {to}</Typography>)}
-            </Grid>
-            <Grid item sm={2} xs={1} className={classes.vdContainer}>
-              <div className={classes.verticalDivider}></div>
-            </Grid>
-            <Grid item sm={8} xs={8} className={classes.descCard}>
-              {title && (<Typography className={classes.title} variant={"h5"} >{title}</Typography>)}
-              {company && (<Typography className={classes.company} style={customTheme.typography.subtitle1}>{company}</Typography>)}
-              {description && (
-                <Typography className={classes.description} variant={'body1'}>
-                {description.map((desc)=> {
-                  return desc + ' / '
-                })}
-                </Typography>)}
-            </Grid>
+  return (    
+    <MuiThemeProvider theme={customTheme}>
+      <div className={classes.root} onClick={onClick}>
+        <Grid container spacing={8}>
+          <Grid item sm={2} xs={3}>
+            {year && (<Typography className={classes.year} variant={"h5"}>{year}</Typography>)}
+            {(from || to) && (<Typography className={classes.date} style={customTheme.typography.subtitle2}>{from} - {to}</Typography>)}
           </Grid>
-          {divider && (<Divider className={classes.divider}/>)}
-          {!divider && (<Divider className={classes.hiddenDivider}/>)}
-        </div>
-      </MuiThemeProvider>
-      )}
+          <Grid item sm={2} xs={1} className={classes.vdContainer}>
+            <div className={classes.verticalDivider}></div>
+          </Grid>
+          <Grid item sm={8} xs={8} className={classes.descCard}>
+            {title && (<Typography className={classes.title} variant={"h5"} >{title}</Typography>)}
+            {company && (<Typography className={classes.company} style={customTheme.typography.subtitle1}>{company}</Typography>)}
+            {description && (
+              <Typography className={classes.description} variant={'body1'}>
+              {description.map((desc)=> {
+                return desc + ' / '
+              })}
+              </Typography>)}
+          </Grid>
+        </Grid>
+        {divider && (<Divider className={classes.divider}/>)}
+        {!divider && (<Divider className={classes.hiddenDivider}/>)}
+      </div>
+    </MuiThemeProvider>
+    )
 }
 export default withStyles(styles)(ExperienceTile);

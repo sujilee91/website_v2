@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import Beach from '../images/icons/Beach_edit.svg'
 import Camper from '../images/icons/Camp_Edit.svg'
 import Nomad from '../images/icons/Dev_Lee.svg'
+import Foodie from '../images/icons/Foodie.svg'
 
 const styles = (customTheme) => ({
   root: {
@@ -71,18 +72,37 @@ class About extends React.Component{
       <div className={this.props.classes.container}>
         <Title value={'About'}/>
         <MuiThemeProvider theme={customTheme}>
-          <Grid container spacing={0} className={this.props.classes.cards}>
-            <Grid item md={3} sm={6} xs={6} className={this.props.classes.aboutCard}>
-              <img src={Nomad} alt="RemoteWorker" width="90%"/>
+          <Grid container spacing={8} className={this.props.classes.cards}>
+            <Grid item md={3} sm={6} xs={12} className={this.props.classes.aboutCard}>
+              <img src={Nomad} alt="RemoteWorker"/>
+              <Typography variant={"overline"} >Remote Worker</Typography>
+              <Typography variant={"body1"} >
+                Remotely working frontend ux/ui developer who barely getting out of her house. 
+                My cat, Simba, hang out with me and help me beat the loneliness.
+              </Typography>
             </Grid>
-            <Grid item md={3} sm={6} xs={6} className={this.props.classes.aboutCard}>
-            <img src={Beach} alt="beach" width="90%"/>
+            <Grid item md={3} sm={6} xs={12} className={this.props.classes.aboutCard}>
+              <img src={Beach} alt="beach"/>
+              <Typography variant={"overline"} >Beach Lover</Typography>
+              <Typography variant={"body1"} >
+                Absolutely love any activity related to beach. Boogieboarding, body surfing, tanning, and chill by the sun.
+              </Typography>
             </Grid>
-            <Grid item md={3} sm={6} xs={6} className={this.props.classes.aboutCard}>
-            <img src={Camper} alt="Camper" width="90%"/>
+            <Grid item md={3} sm={6} xs={12} className={this.props.classes.aboutCard}>
+              <img src={Camper} alt="Camper"/>
+              <Typography variant={"overline"} >Camper</Typography>
+              <Typography variant={"body1"} >
+                Beautiful scenary of Rockie mountain is in my backyard. 
+                Me & my husband camerized 1968 Dodge van so when its warm we are good to go adventure.
+              </Typography>
             </Grid>
-            <Grid item md={3} sm={6} xs={6} className={this.props.classes.aboutCard}>
-            <img src={Beach} alt="beach" width="90%"/>
+            <Grid item md={3} sm={6} xs={12} className={this.props.classes.aboutCard}>
+              <img src={Foodie} alt="foodie" />
+              <Typography variant={"overline"} >Foodie + Chef</Typography>
+              <Typography variant={"body1"} >
+                My gene is tide with foods. I love eat, I love cook, baking? That's my 2nd nature. 
+                Biggest reason of go workout everyday.
+              </Typography>
             </Grid>
           </Grid>
           <Grid container spacing={24} className={this.props.classes.buttonGrid}>

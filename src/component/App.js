@@ -4,18 +4,16 @@ import { fab,faLinkedinIn, faGithub, faDribbble, faInstagram } from '@fortawesom
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Header from './Header';
 import Container from './Container';
-
+import { Router, Route, IndexRoute } from 'react-router'
 library.add(fab, faLinkedinIn, faGithub, faCheckSquare, faCoffee, faGithub, faDribbble, faInstagram)
 
-class App extends Component {
-  render() {
-    return (
+const App = () => {
+  return (
       <div className="App">
         <Header/>
         <Container/>
       </div>
     );
-  }
 }
 
 export default App;
