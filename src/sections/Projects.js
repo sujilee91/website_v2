@@ -139,10 +139,10 @@ class Project extends React.Component{
       autoplaySpeed: 5000,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1170,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2,
+            slidesToScroll: 2,
             infinite: true,
             dots: true
           }
@@ -155,7 +155,7 @@ class Project extends React.Component{
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 680,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -208,11 +208,11 @@ class Project extends React.Component{
                       </em>
                     </Typography>
                   </CardContent>
-                  <CardActions>
+                  {/* <CardActions>
                     <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'web2'})}} color={"primary"} size={'small'} fullWidth={true}>
                       View More
                     </Button>
-                  </CardActions>
+                  </CardActions> */}
                 </Card>
               </div>
               <div>
@@ -248,15 +248,15 @@ class Project extends React.Component{
                       <img src={websiteV1} className={this.props.classes.image} alt={'Website V1'}/>
                     </div>
                     <Typography variant="body1" className={this.props.classes.description}>
-                        1st personal website using Bootstrap template.<br/><br/>
+                        1st personal website using Bootstrap template with vanilla JS.<br/><br/>
                         <em>Bootstrap, JS, CSS</em>
                       </Typography>
                   </CardContent>
-                  <CardActions>
+                  {/* <CardActions>
                     <Button className={classes.viewMore} onClick={()=>{this.setState({open: !this.state.open, type:'web1'})}} color={"primary"} size={'small'} fullWidth={true}>
                       View More
                     </Button>
-                  </CardActions>
+                  </CardActions> */}
                 </Card>
               </div>
             </Slider>
