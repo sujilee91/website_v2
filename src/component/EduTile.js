@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import Grid from '@material-ui/core/Grid';
+import React, { useState } from 'react'
+import { withStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import Grid from '@material-ui/core/Grid'
 import customTheme from '../styles/theme'
-import { CardContent, MuiThemeProvider, Typography } from '@material-ui/core';
+import { CardContent, MuiThemeProvider, Typography } from '@material-ui/core'
 
 const styles = (customTheme) => ({
   degree: {
@@ -15,57 +15,62 @@ const styles = (customTheme) => ({
     fontFamily: 'Noto Sans JP',
     fontWeight: '300',
     fontSize: 15,
-    color: customTheme.palette.primary.contranstText
+    color: customTheme.palette.primary.contranstText,
   },
   description: {
-    fontSize: 13
+    fontSize: 13,
   },
   date: {
     fontFamily: 'Noto Sans JP',
     fontWeight: '300',
     fontSize: 15,
     color: '#be3535',
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   card: {
     borderRadius: '0',
     transition: 'transform 0.6s',
     transformStyle: 'preserve-3d',
   },
-  '$card:hover':{
+  '$card:hover': {
     backgroundColor: '#00000',
-    '& $frontCard':{
-      transform: 'rotateY(180deg)'
-    }
+    '& $frontCard': {
+      transform: 'rotateY(180deg)',
+    },
   },
   frontCard: {
     backfaceVisibility: 'hidden',
-    zIndex: 2
+    zIndex: 2,
   },
   backCard: {
     backfaceVisibility: 'hidden',
     transform: 'rotateY(180deg)',
-    zIndex: 1
+    zIndex: 1,
   },
   centerAlign: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   rightAlign: {
-    textAlign: 'right'
-  }
-});
+    textAlign: 'right',
+  },
+})
 
- const EducationTile = (props) => {
-  const {classes, location, schoolName, degree, award,  date, description } = props;
-  const {
-    rightAlign: rightAlignClass,
-    centerAlign: centerAlignClass
-  } = props.classes
-  const cardClasses = [props.classes.card];
-  if (props.align==='center') {
+const EducationTile = ({
+  classes,
+  location,
+  schoolName,
+  degree,
+  award,
+  date,
+  description,
+  align,
+}) => {
+  const { rightAlign: rightAlignClass, centerAlign: centerAlignClass } = classes
+  const cardClasses = [classes.card]
+  if (align === 'center') {
     cardClasses.push(centerAlignClass)
   }
-  if(props.align==='right'){
+  if (align === 'right') {
     cardClasses.push(rightAlignClass)
   }
   return (
@@ -73,25 +78,15 @@ const styles = (customTheme) => ({
       <Grid item xs={12} md={4}>
         <Card elevation={0} classes={{ root: cardClasses.join(' ') }}>
           <CardContent className={classes.frontCard}>
-            <Typography variant={"subtitle1"}>
-              {location}
-            </Typography>
-            <Typography variant={"h5"}>
-              {schoolName}
-            </Typography>
-            <Typography variant={"body2"}>
-              {degree}
-            </Typography>
-            <div className={classes.award}>
-              {award}
-            </div>
-            <div className={classes.date}>
-              {date}
-            </div>
+            <Typography variant={'subtitle1'}>{location}</Typography>
+            <Typography variant={'h5'}>{schoolName}</Typography>
+            <Typography variant={'body2'}>{degree}</Typography>
+            <div className={classes.award}>{award}</div>
+            <div className={classes.date}>{date}</div>
           </CardContent>
         </Card>
       </Grid>
     </MuiThemeProvider>
   )
 }
-export default withStyles(styles)(EducationTile);
+export default withStyles(styles)(EducationTile)

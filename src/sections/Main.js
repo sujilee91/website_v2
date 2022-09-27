@@ -71,8 +71,7 @@ const styles = (theme) => ({
   },
 })
 
-function Main(props) {
-  const { classes } = props
+const Main = ({ classes }) => {
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>

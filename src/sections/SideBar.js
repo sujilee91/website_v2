@@ -1,7 +1,7 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import React from 'react'
+import { withStyles } from '@material-ui/core/styles'
+import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 
 const styles = {
   root: {
@@ -16,7 +16,7 @@ const styles = {
     maxWidth: '1170px',
     margin: 'auto',
     backgroundColor: 'inherit',
-    paddingLeft: '50px' 
+    paddingLeft: '50px',
   },
   title1: {
     paddingTop: '50px',
@@ -24,21 +24,16 @@ const styles = {
     fontSize: '3rem',
     fontWeight: 400,
     lineHeight: 1.04,
-    letterSpacing: '0em'
+    letterSpacing: '0em',
   },
   title2: {
     paddingTop: '20px',
-    paddingBottom: '20px'
-  }
-};
-
-function SideBar(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
-      
-    </div>
-  );
+    paddingBottom: '20px',
+  },
 }
 
-export default withStyles(styles)(SideBar);
+const SideBar = ({ classes }) => {
+  return <div className={classes.root} />
+}
+
+export default withStyles(styles)(SideBar)

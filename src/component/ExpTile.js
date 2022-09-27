@@ -55,19 +55,17 @@ const styles = (customTheme) => ({
   },
 })
 
-const ExperienceTile = (props) => {
-  const {
-    classes,
-    year,
-    from,
-    to,
-    company,
-    description,
-    title,
-    divider,
-    onClick,
-  } = props
-
+const ExperienceTile = ({
+  classes,
+  year,
+  from,
+  to,
+  company,
+  description,
+  title,
+  divider,
+  onClick,
+}) => {
   return (
     <MuiThemeProvider theme={customTheme}>
       <div className={classes.root} onClick={onClick}>
