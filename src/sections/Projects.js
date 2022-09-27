@@ -1,27 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   withStyles,
   MuiThemeProvider,
-  Grid,
   Card,
   CardContent,
-  CardActions,
-  Dialog,
-  Button,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
   withMobileDialog,
 } from '@material-ui/core'
 import Title from '../component/Title'
 import websiteV1 from '../images/website_v1.png'
 import websiteV2 from '../images/website_v2.png'
 import customTheme from '../styles/theme'
-import WebV2 from '../contents/WebV2'
-import WebV1 from '../contents/WebV1'
-import DS from '../contents/DS'
-import Design from '../contents/Design'
 import DSScreen from '../images/clinicScreen.png'
 import IconWork from '../images/icons/OJ.png'
 import Slider from 'react-slick'
@@ -125,13 +113,6 @@ const styles = (customTheme) => ({
 })
 
 const Project = ({ classes, fullScreen }) => {
-  const [open, setOpen] = useState(false)
-  const [type, setType] = useState('')
-
-  const handleClose = () => {
-    setOpen(false)
-  }
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -181,7 +162,11 @@ const Project = ({ classes, fullScreen }) => {
                 </div>
                 <CardContent>
                   <div className={classes.imageContainer}>
-                    <img src={IconWork} className={classes.image} />
+                    <img
+                      src={IconWork}
+                      className={classes.image}
+                      alt="personal"
+                    />
                   </div>
                   <Typography variant="body1" className={classes.description}>
                     From personal resume to icon creation using Adobe
@@ -206,6 +191,7 @@ const Project = ({ classes, fullScreen }) => {
                       src={websiteV2}
                       className={classes.image}
                       width="100%"
+                      alt="websitev2"
                     />
                   </div>
                   <Typography variant="body1" className={classes.description}>
@@ -226,7 +212,11 @@ const Project = ({ classes, fullScreen }) => {
                 </div>
                 <CardContent>
                   <div className={classes.imageContainer}>
-                    <img src={DSScreen} className={classes.image} />
+                    <img
+                      src={DSScreen}
+                      className={classes.image}
+                      alt="client"
+                    />
                   </div>
                   <Typography variant="body1" className={classes.description}>
                     Clinic business website in Korean using React, Material Ui

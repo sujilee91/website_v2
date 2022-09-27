@@ -4,17 +4,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Button from '@material-ui/core/Button'
 import Hidden from '@material-ui/core/Hidden'
-import Grid from '@material-ui/core/Grid'
-import customTheme from '../styles/theme'
-import * as Scroll from 'react-scroll'
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from 'react-scroll'
+import { scroller } from 'react-scroll'
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import List from '@material-ui/core/List'
 import Divider from '@material-ui/core/Divider'

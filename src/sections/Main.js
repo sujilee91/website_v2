@@ -128,7 +128,7 @@ const Main = ({ classes }) => {
                 <FontAwesomeIcon icon={['fab', 'dribbble']} />
               </IconButton>
             </div>
-            <Typography variant="display" className={classes.title1}>
+            <Typography variant="body1">
               Frontend UX / UI Engineer with 5+ years of experience. <br />
               <br />
               Strong understanding and passion in creative, clean, and

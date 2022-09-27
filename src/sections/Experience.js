@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
-import { withStyles, MuiThemeProvider } from '@material-ui/core/styles'
+import React from 'react'
+import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Title from '../component/Title'
 import ExperienceTile from '../component/ExpTile'
-import ExperienceCard from '../component/ExpCard'
-import theme from '../styles/theme'
 
 const styles = (theme) => ({
   root: {

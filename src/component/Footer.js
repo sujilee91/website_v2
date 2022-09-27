@@ -1,11 +1,8 @@
 import React from 'react'
 import { withStyles, MuiThemeProvider } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Grid from '@material-ui/core/Grid'
 import Fab from '@material-ui/core/Fab'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Typography } from '@material-ui/core'
-import Title from '../component/Title'
 import theme from '../styles/theme'
 
 const styles = (theme) => ({

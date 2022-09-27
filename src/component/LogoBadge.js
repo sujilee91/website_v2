@@ -1,7 +1,6 @@
 import React from 'react'
-import { withStyles, MuiThemeProvider } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles'
 import '../styles/Header.css'
-import theme from '../styles/theme'
 
 const styles = (theme) => ({
   root: {

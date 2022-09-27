@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles'
 import Title from '../component/Title'
 import EducationTitle from '../component/EduTile'
 import Grid from '@material-ui/core/Grid'
-import customTheme from '../styles/theme'
 
 const styles = (customTheme) => ({
   root: {

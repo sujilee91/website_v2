@@ -8,7 +8,7 @@ import tap from '../images/tap.png'
 import showpass from '../images/showpass.jpg'
 import cm from '../images/cm.png'
 import oil from '../images/client.png'
-import theme from '../styles/theme'
+
 const styles = (theme) => ({
   root: {
     animation: 'zoom 0.5s',

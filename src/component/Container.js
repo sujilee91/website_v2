@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import SideBar from '../sections/SideBar'
 import About from '../sections/About'
 import Main from '../sections/Main'
 import Experience from '../sections/Experience'
